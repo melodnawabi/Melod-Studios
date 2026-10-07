@@ -1,0 +1,52 @@
+<!-- @dsCard height=340 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Melod Studio — cover</title>
+<style>
+  html, body { margin: 0; background: var(--ground); }
+  .cv { position: relative; width: 960px; height: 340px; overflow: hidden; background: var(--ground); }
+  .cv svg { position: absolute; left: 0; top: 0; }
+  .violet { fill: var(--violet); }
+  .magenta { fill: var(--magenta); }
+  .surface { fill: var(--surface); }
+  .raised { fill: var(--surface-raised); }
+  .ink { fill: var(--ink); }
+  .line { fill: var(--line); }
+  .card { rx: var(--radius-lg); }
+  .bar { rx: var(--radius-sm); }
+  .txt { position: absolute; left: 48px; bottom: 40px; max-width: 420px; }
+  .name { font-family: var(--font-display); font-weight: 900; font-size: 120px; line-height: .95; letter-spacing: -.02em; color: var(--ink); margin: 0; }
+  .tag { font: 500 14px/20px var(--font-sans); color: var(--ink-muted); margin: 16px 0 0; }
+</style></head>
+<body>
+<div class="cv">
+  <svg width="960" height="340" viewBox="0 0 960 340" aria-hidden="true">
+    <!--
+      blocks: violet slab 168x340 (space-24 + space-12 multiples) bleeding top and bottom; mood magenta 120x96; surface cards 3 x 264x72; ink square 48x48
+      arrangement: one tall violet slab at the right with a staircase of surface cards stepping down-left toward it, like the original hero's stacked panels
+      pattern: card bars (radius-sm) — the system's own motif, a magenta bar plus line skeletons on each surface card; chosen because the README names the card bar as the signature
+      scales: gaps space-4 (16) and space-6 (24); card corners radius-lg (12); bars radius-sm (4)
+    -->
+    <rect class="violet" x="792" y="0" width="168" height="340"/>
+    <rect class="magenta card" x="704" y="24" width="120" height="96"/>
+    <rect class="ink" x="744" y="272" width="48" height="48"/>
+
+    <rect class="surface card" x="512" y="40" width="264" height="72"/>
+    <rect class="magenta bar" x="536" y="60" width="96" height="8"/>
+    <rect class="line bar" x="536" y="80" width="176" height="8"/>
+
+    <rect class="raised card" x="560" y="136" width="264" height="72"/>
+    <rect class="magenta bar" x="584" y="156" width="96" height="8"/>
+    <rect class="line bar" x="584" y="176" width="140" height="8"/>
+
+    <rect class="surface card" x="608" y="232" width="264" height="72"/>
+    <rect class="magenta bar" x="632" y="252" width="96" height="8"/>
+    <rect class="line bar" x="632" y="272" width="188" height="8"/>
+  </svg>
+  <div class="txt">
+    <h1 class="name">Melod<br>Studio</h1>
+    <p class="tag">Bold layouts for Waterloo Region businesses.</p>
+  </div>
+</div>
+</body>
+</html>
