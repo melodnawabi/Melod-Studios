@@ -1,0 +1,27 @@
+/* Fonts are served from Google Fonts (no binaries in source repo). */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Sora:wght@400;500;700&family=Anton&family=Inter+Tight:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Archivo+Black&family=Archivo:wght@400;500;700&family=Shrikhand&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;700&display=swap");
+:root{
+--font-display:"Fraunces",Georgia,serif;
+--font-sans:"Manrope",system-ui,sans-serif;
+--font-mono:"JetBrains Mono",ui-monospace,monospace;
+--font-luxe-display:"Cormorant Garamond",Georgia,serif;--font-luxe-body:"Sora",system-ui,sans-serif;
+--font-street-display:"Anton",Impact,sans-serif;--font-street-body:"Inter Tight",system-ui,sans-serif;
+--font-friendly-display:"Bricolage Grotesque",system-ui,sans-serif;--font-friendly-body:"DM Sans",system-ui,sans-serif;
+--font-swiss-display:"Archivo Black",Arial Black,sans-serif;--font-swiss-body:"Archivo",Arial,sans-serif;
+--font-retro-display:"Shrikhand",Georgia,serif;--font-retro-body:"Space Grotesk",system-ui,sans-serif;
+--font-monotech-display:"Space Mono",ui-monospace,monospace;--font-monotech-body:"IBM Plex Sans",system-ui,sans-serif;
+--font-yours-display:"Fraunces",Georgia,serif;
+/* scale (from components.css + Remix Lab) */
+--type-display-xl:clamp(46px,6.6vw,104px);
+--type-display-lg:76px;--type-display-lh:.98;--type-display-ls:-.015em;
+--type-h2:clamp(34px,4.2vw,64px);
+--type-h3:26px;
+--type-card-title:24px;
+--type-lead:20px;--type-lead-lh:31px;
+--type-sub:19px;--type-sub-lh:30px;
+--type-body:16px;--type-body-lh:26px;
+--type-small:14px;--type-small-lh:22px;
+--type-eyebrow:12px;--type-eyebrow-ls:.18em;
+--type-stat:44px;
+}

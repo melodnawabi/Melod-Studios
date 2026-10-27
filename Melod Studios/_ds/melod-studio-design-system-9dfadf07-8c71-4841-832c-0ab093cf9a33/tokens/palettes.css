@@ -1,0 +1,25 @@
+/* Remix Lab palette key colours: <palette>-bg / -accent / -hl. Source: tokens.css */
+:root{
+--neon-bg:#f2f2ee;--neon-accent:#0b0b0b;--neon-hl:#c6ff00;
+--diner-bg:#fbf3e4;--diner-accent:#c8321e;--diner-hl:#f2b33d;
+--forest-bg:#f1ead9;--forest-accent:#1f4d36;--forest-hl:#ff7a1a;
+--blush-bg:#fbe9ec;--blush-accent:#5b1a47;--blush-hl:#d4a24c;
+--mono-bg:#ffffff;--mono-accent:#1f4bff;
+--ocean-bg:#eef7fb;--ocean-accent:#0a2540;--ocean-hl:#ff6b5a;
+--navygold-bg:#fbf8f1;--navygold-accent:#0d1b33;--navygold-hl:#d9a936;
+--citrus-bg:#ffffff;--citrus-accent:#ff7a00;--citrus-hl:#a6e22e;
+--clay-bg:#f4ede2;--clay-accent:#b4532a;--clay-hl:#8fa98a;
+--financial-bg:#fbf7ef;--financial-accent:#0d3f18;--financial-hl:#d9b25f;
+}
+[data-theme="dark"]{
+--neon-bg:#0a0a0c;--neon-accent:#c6ff00;--neon-hl:#ff2e88;
+--diner-bg:#241309;--diner-accent:#f2b33d;--diner-hl:#c8321e;
+--forest-bg:#0f2219;--forest-accent:#ff7a1a;--forest-hl:#ff7a1a;
+--blush-bg:#2a0d22;--blush-accent:#e7b75f;--blush-hl:#e7b75f;
+--mono-bg:#0a0a0a;--mono-accent:#4d73ff;
+--ocean-bg:#071a2e;--ocean-accent:#ff6b5a;--ocean-hl:#ff6b5a;
+--navygold-bg:#0b1628;--navygold-accent:#e0b44c;--navygold-hl:#e0b44c;
+--citrus-bg:#101a08;--citrus-accent:#a6e22e;--citrus-hl:#ff7a00;
+--clay-bg:#221812;--clay-accent:#d97a4e;--clay-hl:#8fa98a;
+--financial-bg:#0a2a12;--financial-accent:#d9b25f;--financial-hl:#d9b25f;
+}

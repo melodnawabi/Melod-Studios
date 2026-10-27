@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/typography.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/colors.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/palettes.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/components/components.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/styles.css">
+<script src="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/_ds_bundle.js"></script>
+<style>html{scroll-behavior:smooth}body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}a{color:var(--magenta-text)}a:hover{color:var(--ink)}</style>
+</helmet>
+<div id="top" style="background:var(--ground);color:var(--ink);min-height:100vh">
+<nav style="max-width:var(--container-max);margin:0 auto;padding:var(--space-6) var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;box-sizing:border-box">
+  <a href="Melod%20Studio%20Site%20v2.dc.html" style="font:900 24px/1 var(--font-display);color:var(--ink);text-decoration:none;letter-spacing:-.02em;white-space:nowrap">Melod Studios</a>
+  <div style="display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <a href="Melod%20Studios%20Work.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Work</a>
+    <a href="Melod%20Studios%20Templates.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Templates</a>
+    <a href="Melod%20Studios%20Pricing.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Pricing</a>
+    <a href="Melod%20Studio%20Timeline.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Our story</a>
+    <a href="Melod%20Studio%20Tools.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Resources</a>
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="outline" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="130px,52px">Get in touch</x-import>
+  </div>
+</nav>
+
+<header style="max-width:var(--container-max);margin:0 auto;padding:var(--space-12) var(--gutter) var(--space-16);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-6);align-items:flex-start">
+  <div style="white-space:nowrap"><x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Badge" hint-size="220px,30px">Template library</x-import></div>
+  <h1 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-display-xl);line-height:.95;letter-spacing:-.02em;margin:0;max-width:15ch;text-wrap:balance">A starting point for every kind of business.</h1>
+  <p class="ms-sub" style="max-width:46ch">{{ countLine }} Pick one, switch the colours, and I'll build it out with your name, photos and pages.</p>
+  <div role="group" aria-label="Filter by industry" style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4)">
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="10">
+      <button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:2px solid #111111;background:{{ c.bg }};color:{{ c.fg }};font:700 14px/1 var(--font-sans);white-space:nowrap;cursor:pointer;transition:transform .2s" style-hover="transform:translateY(-2px)">{{ c.label }}<span style="font:500 12px/1 var(--font-mono)">{{ c.n }}</span></button>
+    </sc-for>
+  </div>
+</header>
+
+<section style="background:var(--paper);color:var(--on-paper);padding:var(--space-16) 0 var(--space-24)">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-24)">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+      <div style="display:flex;flex-direction:column;gap:var(--space-10)">
+        <div style="display:flex;align-items:baseline;gap:var(--space-4);flex-wrap:wrap">
+          <h2 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0">{{ g.label }}</h2>
+          <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--magenta-text)">{{ g.sub }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,{{ minW }}px),1fr));gap:var(--space-12) var(--space-8)">
+          <sc-for list="{{ g.items }}" as="t" hint-placeholder-count="3">
+            <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+              <button type="button" onClick="{{ t.open }}" aria-label="Preview {{ t.name }} full size" style="display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px)">
+                <dc-import name="TemplateCard" t="{{ t }}" hint-size="100%,280px"></dc-import>
+              </button>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--magenta-text)">{{ t.kind }}</span>
+                <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em">{{ t.name }}</span>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3)">
+                <div role="group" aria-label="Colour" style="display:flex;gap:8px">
+                  <sc-for list="{{ t.sw }}" as="s" hint-placeholder-count="3">
+                    <button type="button" onClick="{{ s.pick }}" aria-pressed="{{ s.pressed }}" aria-label="{{ s.label }}" style="width:28px;height:28px;border-radius:999px;border:0;padding:0;cursor:pointer;background:{{ s.bg }};box-shadow:{{ s.ring }};display:flex;align-items:center;justify-content:center"><span style="width:10px;height:10px;border-radius:999px;background:{{ s.accent }}"></span></button>
+                  </sc-for>
+                </div>
+                <select aria-label="Font pairing" value="{{ t.fontIdx }}" onChange="{{ t.onFontSel }}" style="font:600 13px/1 var(--font-sans);padding:9px 10px;border:2px solid #111111;border-radius:var(--radius-sm);background:#ffffff;color:#111111;cursor:pointer">
+                  <sc-for list="{{ fontOpts }}" as="o" hint-placeholder-count="8"><option value="{{ o.v }}">{{ o.label }}</option></sc-for>
+                </select>
+                <select aria-label="Hero style" value="{{ t.heroIdx }}" onChange="{{ t.onHeroSel }}" style="font:600 13px/1 var(--font-sans);padding:9px 10px;border:2px solid #111111;border-radius:var(--radius-sm);background:#ffffff;color:#111111;cursor:pointer">
+                  <sc-for list="{{ heroOpts }}" as="o" hint-placeholder-count="6"><option value="{{ o.v }}">{{ o.label }}</option></sc-for>
+                </select>
+                <button type="button" onClick="{{ t.toggleDark }}" aria-pressed="{{ t.darkPressed }}" style="font:600 13px/1 var(--font-sans);padding:9px 10px;border:2px solid #111111;border-radius:var(--radius-sm);background:#ffffff;color:#111111;cursor:pointer;font-weight:700">{{ t.modeLabel }}</button>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-6)">
+                <a href="{{ t.startHref }}" style="font:700 15px/22px var(--font-sans);text-underline-offset:4px">Start with this look →</a>
+                <button type="button" onClick="{{ t.open }}" style="padding:0;border:0;background:transparent;cursor:pointer;font:700 15px/22px var(--font-sans);color:var(--on-paper);text-decoration:underline;text-underline-offset:4px">Full-size preview</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.14em;color:var(--ink-muted)">ALL BUSINESSES SHOWN ARE FICTIONAL DEMOS • PHOTOS SWAP TO UNSPLASH OR CLIENT SHOTS AT BUILD</span>
+  </div>
+</section>
+
+<section style="background:var(--mood-magenta);color:#ffffff;padding:var(--space-24) 0">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-6);align-items:flex-start">
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:#ffffff">DON'T SEE YOUR BUSINESS?</span>
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0;max-width:16ch;text-wrap:balance">Every template is a start, not a limit.</h2>
+    <p style="font:500 19px/30px var(--font-sans);margin:0;max-width:44ch;color:#ffffff">Tell me what you do. I'll design a site around it.</p>
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="primary" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="190px,52px">Book a free call</x-import>
+  </div>
+</section>
+
+<sc-if value="{{ hasPv }}" hint-placeholder-val="{{ false }}">
+  <div ref="{{ pvRef }}" role="dialog" aria-modal="true" aria-label="Full-size template preview" style="position:fixed;inset:0;z-index:100;background:rgba(6,43,46,.94);overflow-y:auto;box-sizing:border-box;padding:var(--space-6) var(--gutter)">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:flex-start">
+      <div style="flex:1 1 640px;min-width:0">
+        <dc-import name="TemplateCard" t="{{ pv }}" hint-size="100%,560px"></dc-import>
+      </div>
+      <div style="flex:1 1 300px;max-width:400px;box-sizing:border-box;background:var(--paper);color:var(--on-paper);border-radius:var(--radius-lg);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-6)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-4)">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--magenta-text)">{{ pv.kind }}</span>
+            <span style="font:900 28px/1.05 var(--font-display);letter-spacing:-.01em">{{ pv.name }}</span>
+          </div>
+          <button type="button" onClick="{{ closePv }}" aria-label="Close preview" style="width:44px;height:44px;flex:none;border-radius:999px;border:2px solid #111111;background:transparent;color:#111111;font:700 18px/1 var(--font-sans);cursor:pointer">✕</button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <span style="font:500 12px/16px var(--font-mono);letter-spacing:.16em;color:var(--magenta-text)">COLOUR</span>
+          <div style="display:flex;gap:10px">
+            <sc-for list="{{ pv.sw }}" as="s" hint-placeholder-count="3">
+              <button type="button" onClick="{{ s.pick }}" aria-pressed="{{ s.pressed }}" aria-label="{{ s.label }}" style="width:40px;height:40px;border-radius:999px;border:0;padding:0;cursor:pointer;background:{{ s.bg }};box-shadow:{{ s.ring }};display:flex;align-items:center;justify-content:center"><span style="width:14px;height:14px;border-radius:999px;background:{{ s.accent }}"></span></button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <span style="font:500 12px/16px var(--font-mono);letter-spacing:.16em;color:var(--magenta-text)">FONT PAIRING</span>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ pv.fontChips }}" as="c" hint-placeholder-count="4">
+                <button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" style="display:flex;align-items:center;padding:8px 12px;border-radius:999px;border:2px solid #111111;background:{{ c.bg }};color:{{ c.fg }};font:700 13px/1 var(--font-sans);white-space:nowrap;cursor:pointer">{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <span style="font:500 12px/16px var(--font-mono);letter-spacing:.16em;color:var(--magenta-text)">HERO STYLE</span>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ pv.heroChips }}" as="c" hint-placeholder-count="4">
+                <button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" style="display:flex;align-items:center;padding:8px 12px;border-radius:999px;border:2px solid #111111;background:{{ c.bg }};color:{{ c.fg }};font:700 13px/1 var(--font-sans);white-space:nowrap;cursor:pointer">{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <span style="font:500 12px/16px var(--font-mono);letter-spacing:.16em;color:var(--magenta-text)">MODE</span>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ pv.modeChips }}" as="c" hint-placeholder-count="4">
+                <button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" style="display:flex;align-items:center;padding:8px 12px;border-radius:999px;border:2px solid #111111;background:{{ c.bg }};color:{{ c.fg }};font:700 13px/1 var(--font-sans);white-space:nowrap;cursor:pointer">{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="primary" href="{{ pv.startHref }}" hint-size="100%,52px">Start with this look</x-import>
+          <span style="font:500 12px/18px var(--font-mono);letter-spacing:.1em;color:var(--ink-muted)">YOUR PICKS ARE SENT WITH YOUR MESSAGE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<footer style="background:#111111;color:#f7f4ee;padding:var(--space-12) 0">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <a href="Melod%20Studio%20Site%20v2.dc.html" style="font:900 24px/1 var(--font-display);letter-spacing:-.02em;color:#f7f4ee;text-decoration:none">Melod Studios</a>
+    <div style="display:flex;gap:var(--space-6);flex-wrap:wrap;font:600 15px/20px var(--font-sans)"><a href="Melod%20Studios%20Work.dc.html" style="color:#f7f4ee">Work</a><a href="Melod%20Studios%20Templates.dc.html" style="color:#f7f4ee">Templates</a><a href="Melod%20Studios%20Pricing.dc.html" style="color:#f7f4ee">Pricing</a><a href="Melod%20Studio%20Timeline.dc.html" style="color:#f7f4ee">Our story</a><a href="Melod%20Studio%20Tools.dc.html" style="color:#f7f4ee">Resources</a><a href="Melod%20Studio%20Site%20v2.dc.html#contact" style="color:#f7f4ee">Contact</a></div>
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">WEB • IPHONE • ANDROID • SEO • WATERLOO REGION</span>
+  </div>
+</footer>
+<a href="#top" style="position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--radius-md);background:#111111;color:#f7f4ee;text-decoration:none;font:600 11px/1 var(--font-mono);letter-spacing:.1em;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)"><span style="width:8px;height:8px;border-radius:999px;background:var(--magenta)"></span>BUILT BY MELOD STUDIOS</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cat: null, pal: {}, font: {}, hero: {}, dark: {}, pv: null, typeN: 0, car: {} };
+  carGo(id, d) {
+    if (this.carLock) return; this.carLock = true;
+    this.setState(s => ({ car: { ...s.car, [id]: ((s.car[id] ?? 0) + d + 4) % 4 } }));
+    setTimeout(() => { this.carLock = false; }, 650);
+  }
+  carItems(t) {
+    const a = this.state.car[t.id] ?? 0, names = (t.cd || this.CAR[t.c])[1];
+    const R = {
+      center: { z: 20, left: '50%', bottom: '0%', height: '64%', tf: 'translateX(-50%) scale(1.3)', blur: 'none', op: 1 },
+      left: { z: 10, left: '30%', bottom: '12%', height: '28%', tf: 'translateX(-50%) scale(1)', blur: 'blur(2px)', op: .85 },
+      right: { z: 10, left: '70%', bottom: '12%', height: '28%', tf: 'translateX(-50%) scale(1)', blur: 'blur(2px)', op: .85 },
+      back: { z: 5, left: '50%', bottom: '12%', height: '22%', tf: 'translateX(-50%) scale(1)', blur: 'blur(4px)', op: 1 }
+    };
+    const role = i => i === a ? 'center' : i === (a + 3) % 4 ? 'left' : i === (a + 1) % 4 ? 'right' : 'back';
+    return names.map((name, i) => ({ name, bg: this.CARC[i][0], panel: this.CARC[i][1], ...R[role(i)] }));
+  }
+  pvRef = React.createRef();
+  restartType() {
+    clearTimeout(this.tt); clearInterval(this.ti);
+    const t = this.state.pv && this.T.find(x => x.id === this.state.pv);
+    if (!t) return;
+    const len = (t.as || this.ASSIST[t.c])[0].length;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { this.setState({ typeN: len }); return; }
+    this.setState({ typeN: 0 });
+    this.tt = setTimeout(() => { this.ti = setInterval(() => { if (this.state.typeN >= len) clearInterval(this.ti); else this.setState(s => ({ typeN: s.typeN + 1 })); }, 38); }, 600);
+  }
+  P = [
+    ['#f5ead8','#201e1d','#c67139','#ffffff','#efe0c7','#5c4a36','#8a4a20'],
+    ['#14253d','#ffffff','#c9a24a','#14253d','#1f3452','#c9d3e0','#e2c47c'],
+    ['#111111','#f7f4ee','#00dcc8','#111111','#232323','#b9b5ad','#00dcc8'],
+    ['#f7f4ee','#111111','#6200ea','#ffffff','#ffffff','#4a4a4a','#6200ea'],
+    ['#00dcc8','#111111','#111111','#00dcc8','#7cf0e4','#123f43','#111111'],
+    ['#b8005f','#ffffff','#00dcc8','#111111','#9e0058','#ffd6ea','#7ff5ea'],
+    ['#1d3b2a','#f2f5e9','#c6e86a','#1d3b2a','#284d38','#c2d1c3','#c6e86a'],
+    ['#ffffff','#141414','#e0321b','#ffffff','#f2f2f2','#555555','#b8240f'],
+    ['#f7e8e4','#2b1a24','#8a2d5c','#ffffff','#ffffff','#6b4d5c','#8a2d5c'],
+    ['#0e1726','#e8eef9','#3d8bff','#ffffff','#18243a','#a9b8d1','#7fb2ff'],
+    ['#fff6d6','#1c2430','#e2541a','#ffffff','#ffffff','#5a5040','#b23f0e'],
+    ['#062b2e','#e8fffc','#00dcc8','#062b2e','#0b3d41','#a6d9d4','#00dcc8']
+  ];
+  CATS = [
+    ['motion', 'Motion', 'ANIMATED HEROES • TYPEWRITER ASSISTANT • PRODUCT CAROUSEL', ['Work', 'Studio', 'Contact']],
+    ['food','Food and drink','RESTAURANTS • GROCERY • CAFES • BAKERIES',['Menu','Order','Visit']],
+    ['tech','Electronics','BIG BOX • REPAIR • AUDIO • GAMING',['Shop','Deals','Stores']],
+    ['sports','Sports','BASKETBALL • SOCCER • FOOTBALL • GEAR',['Teams','Schedule','Register']],
+    ['beauty','Beauty','SALONS • SPAS • BARBERS',['Services','Team','Book']],
+    ['events','Events','DJS • VENUES',['Packages','Gallery','Dates']],
+    ['pro','Professional','ACCOUNTING • LAW • MORTGAGE • REAL ESTATE',['Services','About','Contact']],
+    ['trades','Trades','ELECTRICAL • PLUMBING • LANDSCAPING',['Services','Areas','Reviews']],
+    ['health','Health and fitness','GYMS • DENTAL',['Classes','Pricing','Visit']],
+    ['auto','Auto','REPAIR • DEALERS',['Services','Inventory','Visit']],
+    ['finance','Finance','WEALTH • FINTECH • INVESTING',['Platform','Pricing','Log in']],
+    ['retail','Retail','ONLINE STORES • HOME GOODS',['Shop','Collections','Help']],
+    ['education','Education','COURSES • TUTORING',['Courses','Tutors','Enrol']],
+    ['arts','Arts','GALLERIES • AUCTIONS',['Auctions','Artists','Visit']],
+    ['nonprofit','Nonprofit','FOOD BANKS • CHARITIES',['Our work','Volunteer','Donate']]
+  ];
+  FONTS = [
+    ['Studio', 'var(--font-display)', 'var(--font-sans)', 900, '8px', '6px'],
+    ['Luxe', 'var(--font-luxe-display)', 'var(--font-luxe-body)', 700, '999px', '999px'],
+    ['Street', 'var(--font-street-display)', 'var(--font-street-body)', 400, '0px', '0px'],
+    ['Friendly', 'var(--font-friendly-display)', 'var(--font-friendly-body)', 800, '18px', '10px'],
+    ['Swiss', 'var(--font-swiss-display)', 'var(--font-swiss-body)', 400, '4px', '2px'],
+    ['Retro', 'var(--font-retro-display)', 'var(--font-retro-body)', 400, '999px', '8px'],
+    ['Mono-tech', 'var(--font-monotech-display)', 'var(--font-monotech-body)', 700, '6px', '4px'],
+    ['Yours', 'var(--font-yours-display)', 'var(--font-sans)', 900, '12px', '8px']
+  ];
+  FMAP = { display: 0, luxe: 1, street: 2, friendly: 3, swiss: 4, retro: 5, mono: 6 };
+  HEROES = ['Split', 'Full-bleed photo', 'Big type', 'Centered card', 'Bento tiles', 'Marquee band', 'Assistant intro', 'Product carousel'];
+  CARC = [['#c4532a', '#d8754f'], ['#2e8350', '#4a9e69'], ['#b23d77', '#c9619a'], ['#2f69c2', '#4f88d8']];
+  CAR = {
+    finance: ['GROW', ['Savings', 'Index fund', 'RRSP', 'TFSA']],
+    retail: ['HOME', ['Curtain rod', 'Finials', 'Tie-backs', 'Brackets']],
+    education: ['LEARN', ['Math', 'Coding', 'French', 'Test prep']],
+    arts: ['ART', ['Lot 12', 'Lot 18', 'Lot 24', 'Lot 31']],
+    nonprofit: ['GIVE', ['Meals', 'Pantry', 'Kids lunch', 'Winter drive']],
+    motion: ['MOTION', ['Piece 01', 'Piece 02', 'Piece 03', 'Piece 04']],
+    food: ['TASTE', ['House pizza', 'Market salad', 'Fresh loaf', 'Cold brew']],
+    tech: ['PLUG IN', ['4K TV', 'Laptop', 'Headphones', 'Console']],
+    sports: ['GAME DAY', ['Jersey', 'Match ball', 'Court shoes', 'Training kit']],
+    beauty: ['GLOW', ['Cut + colour', 'Facial', 'Skin fade', 'Nail art']],
+    events: ['LIVE', ['Wedding set', 'Gala package', 'Birthday mix', 'Venue hire']],
+    pro: ['SORTED', ['Tax return', 'Will + POA', 'Pre-approval', 'Home search']],
+    trades: ['BUILT', ['Panel upgrade', 'Drain repair', 'New patio', 'EV charger']],
+    health: ['STRONG', ['Strength class', 'Personal training', 'Cleaning', 'Kids checkup']],
+    auto: ['DRIVE', ['Oil change', 'Brake service', 'Certified SUV', 'Winter tires']]
+  };
+  ASSIST = {
+    finance: ['Hi. Ready to see where your money could go?', ['Open an account', 'See returns', 'Talk to an advisor', 'Log in']],
+    retail: ['Hi. Shopping for something special today?', ['Shop new', 'Track my order', 'Returns', 'Help me choose']],
+    education: ['Welcome. What would you like to learn?', ['Browse courses', 'Find a tutor', 'Enrol', 'Ask a question']],
+    arts: ['Welcome in. Bidding tonight, or just looking?', ['See the lots', 'Register to bid', 'Sell your art', 'Visit us']],
+    nonprofit: ['Thanks for stopping by. Want to help this week?', ['Donate', 'Volunteer', 'Get help', 'Our work']],
+    motion: ['Hey. What are we building today?', ['Start a project', 'See our work', 'Say hello', 'Shop']],
+    food: ['Glad you stopped by. Hungry now, or planning ahead?', ['See the menu', 'Book a table', 'Order pickup', 'Find us']],
+    tech: ['Hey. Hunting a deal, a fix, or just browsing?', ['Shop deals', 'Book a repair', 'Check stock', 'Store hours']],
+    sports: ['Welcome in. Ready to play this season?', ['Find a team', 'See the schedule', 'Register', 'Ask a coach']],
+    beauty: ['Hi. Ready for a fresh look this week?', ['Book now', 'See services', 'Meet the team', 'Gift cards']],
+    events: ['Hey. Got a date in mind? Let me check it.', ['Check my date', 'See packages', 'View gallery', 'Get a quote']],
+    pro: ['Welcome. What can we help you sort out today?', ['Book a call', 'See services', 'Ask a question', 'Meet us']],
+    trades: ['Hi. What needs fixing? We can usually come this week.', ['Get a quote', 'Emergency help', 'See services', 'Areas we cover']],
+    health: ['Hey. Ready to feel better? First visit is easy.', ['Book a visit', 'See classes', 'Pricing', 'New patients']],
+    auto: ['Hi. What does your car need today?', ['Book service', 'See inventory', 'Get a quote', 'Hours']]
+  };
+  T = [
+    { id: 'summit', c: 'finance', k: 'Wealth platform', name: 'Summit Capital', url: 'summitcapital.ca', eb: 'WEALTH • FOR BUILDERS', head: 'Your money, working as hard as you.', sub: 'Low-fee portfolios, real advisors and a clear view of every dollar.', cta: 'Open an account', l: 'split', f: 'swiss', p: [2, 1, 9], hd: 2, photo: 'PHOTO • DASHBOARD', it: [['$2.4B', 'managed*'], ['0.4%', 'flat fee*'], ['24/7', 'access']] },
+    { id: 'ledgerline', c: 'finance', k: 'Fintech app', name: 'Ledgerline', url: 'ledgerline.app', eb: 'BUSINESS BANKING APP', head: 'Every invoice, paid on time.', sub: 'Send invoices, track cash flow and get paid faster from one app.', cta: 'Start free', l: 'menu', f: 'mono', p: [11, 9, 2], hd: 4, pt: 'THIS MONTH*', it: [['Paid invoices', '42 clients', '$38,240'], ['Outstanding', '6 clients', '$4,120'], ['Cash on hand', 'All accounts', '$61,900']] },
+    { id: 'polarair', c: 'trades', k: 'HVAC', name: 'Polar Air Heating & Cooling', url: 'polarair.ca', eb: 'HVAC • WATERLOO REGION', head: 'No heat? We come the same day.', sub: 'Furnaces, AC and heat pumps installed and serviced across the region.', cta: 'Book a tech', l: 'booking', f: 'swiss', p: [9, 3, 4], svc: 'Furnace tune-up · 1 hr' },
+    { id: 'restorepro', c: 'trades', k: 'Restoration', name: 'Restore Pro', url: 'restorepro.ca', eb: 'WATER + MOLD • 24/7', head: 'Flooded? We are on the way.', sub: 'Water, fire and mold cleanup with certified crews, any hour.', cta: 'Call now', l: 'split', f: 'swiss', p: [1, 9, 7], photo: 'PHOTO • CREW ON SITE', it: [['24/7', 'response'], ['60 min', 'arrival'], ['Insurance', 'billing']] },
+    { id: 'hearthrail', c: 'retail', k: 'Online store', name: 'Hearth & Rail', url: 'hearthandrail.ca', eb: 'DRAPERY HARDWARE • SHIPS CANADA-WIDE', head: 'Every rod, ring and finial in one place.', sub: 'Window hardware from trusted brands, cut to size and shipped fast.', cta: 'Shop hardware', l: 'grid', f: 'luxe', p: [0, 3, 1], it: [['Iron rod set', '48 to 84 in', '$89'], ['Glass finials', 'Pair', '$34'], ['Ceiling track', 'Per foot', '$12'], ['Tie-backs', 'Brass', '$22']] },
+    { id: 'shieldlife', c: 'pro', k: 'Insurance', name: 'Shield Life', url: 'shieldlife.ca', eb: 'LIFE INSURANCE • ONTARIO', head: 'Cover your family in ten minutes.', sub: 'Term and whole life quotes compared from top Canadian insurers.', cta: 'Get my quote', l: 'menu', f: 'display', p: [1, 11, 3], pt: 'SAMPLE MONTHLY QUOTES', it: [['20-year term', '$500K cover', '$28'], ['30-year term', '$500K cover', '$41'], ['Whole life', '$100K cover', '$96']] },
+    { id: 'brightpath', c: 'education', k: 'Online courses', name: 'Bright Path Learning', url: 'brightpath.ca', eb: 'COURSES • GRADES 6 TO 12', head: 'Better grades, one lesson at a time.', sub: 'Live classes and recorded lessons with Ontario-certified teachers.', cta: 'Browse courses', l: 'grid', f: 'friendly', p: [4, 10, 3], it: [['Grade 9 math', '12 lessons', '$149'], ['Intro to Python', '8 lessons', '$129'], ['French oral', '10 lessons', '$139'], ['OSSLT prep', '6 lessons', '$89']] },
+    { id: 'gallerynine', c: 'arts', k: 'Art auction', name: 'Gallery Nine', url: 'gallerynine.ca', eb: 'ART AUCTION • DOWNTOWN KITCHENER', head: 'Bid on original art from anywhere.', sub: 'Live and online auctions every second Friday. Framing on site.', cta: 'See the lots', l: 'grid', f: 'luxe', p: [2, 3, 1], it: [['Lot 12 · Oil', 'Current bid', '$1,250'], ['Lot 18 · Print', 'Current bid', '$340'], ['Lot 24 · Bronze', 'Current bid', '$2,900'], ['Lot 31 · Photo', 'Current bid', '$480']] },
+    { id: 'fullplate', c: 'nonprofit', k: 'Food bank', name: 'Full Plate', url: 'fullplate.org', eb: 'FOOD BANK • WATERLOO REGION', head: 'No one in our region goes hungry.', sub: 'Donate, volunteer or get help. Every dollar stays local.', cta: 'Donate now', l: 'split', f: 'friendly', p: [6, 10, 0], photo: 'PHOTO • VOLUNTEERS', it: [['$1', 'feeds 3'], ['40', 'pantries'], ['7 days', 'open']] },
+    { id: 'northlight', c: 'motion', k: 'Agency • assistant intro', name: 'Northlight Studio', url: 'northlight.studio', eb: 'CREATIVE AGENCY • WATERLOO', head: 'Ideas that move people.', sub: 'Brand, web and motion for teams that want to be remembered.', cta: 'Start a project', l: 'split', f: 'swiss', p: [2, 9, 11], hd: 6, photo: 'PHOTO • STUDIO', it: [['12', 'people'], ['3', 'disciplines'], ['1', 'studio']],
+      as: ['Glad you stopped in. Good work tends to find us. So, what are we making?', ['Pitch us an idea', 'Come work here', 'Say hello', 'See how we work']] },
+    { id: 'velvet', c: 'motion', k: 'Salon • assistant intro', name: 'Velvet Room', url: 'velvetroom.ca', eb: 'SALON • UPTOWN', head: 'Your chair is waiting.', sub: 'Colour, cuts and treatments by appointment.', cta: 'Book now', l: 'booking', f: 'luxe', p: [8, 2, 1], hd: 6, svc: 'Colour + cut · 2 hrs',
+      as: ['Hi, lovely to see you. Fresh colour, or just a trim this time?', ['Book a colour', 'Book a cut', 'Meet the stylists', 'Gift cards']] },
+    { id: 'shelflife', c: 'motion', k: 'Toy shop • product carousel', name: 'Shelf Life Toys', url: 'shelflifetoys.ca', eb: 'COLLECTIBLES • KITCHENER', head: 'Figures worth a shelf.', sub: 'Hand-painted collectible figures, packed with care and shipped across Canada.', cta: 'Shop the drop', l: 'grid', f: 'street', p: [5, 2, 9], hd: 7, it: [['Series 1', 'Figure', '$39'], ['Series 2', 'Figure', '$39'], ['Display case', 'Acrylic', '$25'], ['Gift box', '4 figures', '$139']],
+      cd: ['3D SHAPE', ['Figure 01', 'Figure 02', 'Figure 03', 'Figure 04']] },
+    { id: 'soletheory', c: 'motion', k: 'Sneaker store • product carousel', name: 'Sole Theory', url: 'soletheory.ca', eb: 'SNEAKERS • KING ST', head: 'Fresh pairs every Friday.', sub: 'Limited runs and everyday classics, sized in store or shipped next day.', cta: 'Discover it', l: 'grid', f: 'swiss', p: [7, 2, 9], hd: 7, it: [['Court low', 'White', '$140'], ['Runner', 'Grey', '$165'], ['High top', 'Black', '$180'], ['Slide', 'Sand', '$60']],
+      cd: ['KICKS', ['Court low', 'Runner', 'High top', 'Trail']] },
+    { id:'ember', c:'food', k:'Restaurant', name:'Ember & Oak', url:'emberandoak.ca', eb:'RESTAURANT • UPTOWN WATERLOO', head:'Wood-fired dinners, booked in a tap.', sub:'Seasonal plates from local farms. Open late Thursday to Sunday.', cta:'Book a table', l:'menu', f:'luxe', p:[0,2,6], pt:'TONIGHT', it:[['Wood-fired half chicken','Lemon, garlic, chili','$26'],['Charred carrots','Whipped feta, honey','$14'],['Ember burger','Aged cheddar, pickles','$21']] },
+    { id:'greenway', c:'food', k:'Grocery store', name:'Greenway Market', url:'greenwaymarket.ca', eb:'GROCERY • KITCHENER', head:'Fresh groceries, ready in an hour.', sub:'Order online, pick up curbside. Local produce every morning.', cta:'Start my order', l:'grid', f:'friendly', p:[6,10,7], it:[['Ontario apples','3 lb bag','$4.99'],['Sourdough loaf','Baked today','$6.50'],['Free-range eggs','Dozen','$5.79'],['Oat milk','1.75 L','$4.29']] },
+    { id:'northbound', c:'food', k:'Cafe', name:'Northbound Coffee', url:'northbound.coffee', eb:'CAFE • KING ST', head:'Your usual, ready when you walk in.', sub:'Order ahead, skip the line, collect points on every cup.', cta:'Order ahead', l:'menu', f:'retro', p:[10,0,11], pt:'POPULAR', it:[['Oat flat white','Double shot','$5.25'],['Maple latte','Local syrup','$5.75'],['Cardamom bun','Baked at 6 am','$4.50']] },
+    { id:'rise', c:'food', k:'Bakery', name:'Rise Bakehouse', url:'risebakehouse.ca', eb:'BAKERY • VICTORIA PARK', head:'Warm loaves by 7 am.', sub:'Sourdough, pastries and cakes from scratch. Pre-order tonight.', cta:'Pre-order', l:'split', f:'display', p:[0,8,10], photo:'PHOTO • MORNING BREAD', it:[['6 am','first bake'],['24','breads'],['0','preservatives']] },
+    { id:'voltline', c:'tech', k:'Electronics store', name:'Voltline', url:'voltline.ca', eb:'ELECTRONICS • 6 STORES', head:'Big tech deals. Pick up today.', sub:'TVs, laptops and phones, price matched at every store.', cta:'Shop deals', l:'grid', f:'swiss', p:[9,7,2], it:[['65" 4K TV','Save $300','$899'],['14" laptop','16 GB RAM','$1,099'],['ANC headphones','Save $80','$279'],['Smart watch','GPS','$349']] },
+    { id:'fixpoint', c:'tech', k:'Phone repair', name:'FixPoint Repair', url:'fixpoint.ca', eb:'PHONE REPAIR • FAIRVIEW', head:'Cracked screen? Fixed while you wait.', sub:'Most iPhone and Galaxy repairs done in under an hour.', cta:'Book a repair', l:'booking', f:'mono', p:[2,9,4], svc:'Screen repair · 45 min' },
+    { id:'signal', c:'tech', k:'Audio and radio', name:'Signal Audio', url:'signalaudio.ca', eb:'AUDIO + RADIO • WATERLOO', head:'Hear the difference before you buy.', sub:'Turntables, speakers and two-way radios, set up by our team.', cta:'Book a listen', l:'grid', f:'display', p:[11,3,2], it:[['Bookshelf speakers','Pair','$449'],['Turntable','Belt drive','$379'],['Two-way radios','2-pack','$129'],['Soundbar','Atmos','$599']] },
+    { id:'levelup', c:'tech', k:'Gaming store', name:'Level Up Games', url:'levelupgames.ca', eb:'GAMING • CAMBRIDGE', head:'Trade in. Level up. Play tonight.', sub:'Consoles, games and trade-in credit checked in seconds.', cta:'Check trade-in', l:'grid', f:'street', p:[5,9,2], it:[['Console bundle','2 controllers','$599'],['Used games','From','$15'],['Wireless headset','New','$149'],['Trade-in credit','Up to','$250']] },
+    { id:'hoops', c:'sports', k:'Basketball club', name:'Grand River Hoops', url:'grandriverhoops.ca', eb:'BASKETBALL • YOUTH + ADULT', head:'Find your team. Play this season.', sub:'Leagues, camps and drop-in runs for ages 8 to 40.', cta:'Register now', l:'score', f:'street', p:[7,2,10], pt:'THIS WEEK', it:[['Hoops vs Rapids','U18 league','78–71','FINAL'],['Hoops vs Storm','U16 league','SAT','2:00 PM'],['Adult drop-in','All levels','THU','8:30 PM']] },
+    { id:'strikers', c:'sports', k:'Soccer academy', name:'KW Strikers FC', url:'kwstrikers.ca', eb:'SOCCER • ACADEMY', head:'Train like a pro. Play every weekend.', sub:'Programs from U6 to senior, indoor all winter.', cta:'Book a trial', l:'score', f:'swiss', p:[6,9,7], pt:'FIXTURES', it:[['Strikers vs United','U12','3–1','FINAL'],['Strikers vs City SC','U14','SUN','10:00 AM'],['Winter futsal','All ages','NOV 3','7:00 PM']] },
+    { id:'wolves', c:'sports', k:'Football club', name:'Waterloo Wolves', url:'waterloowolves.ca', eb:'FOOTBALL • TACKLE + FLAG', head:'Friday nights belong to the Wolves.', sub:'Tackle and flag football for players 9 and up.', cta:'Join the pack', l:'score', f:'street', p:[1,2,7], pt:'SCHEDULE', it:[['Wolves vs Ravens','Varsity','28–14','FINAL'],['Wolves vs Titans','Varsity','FRI','7:00 PM'],['Flag tryouts','Ages 9 to 14','SAT','9:00 AM']] },
+    { id:'probench', c:'sports', k:'Sports store', name:'Pro Bench Sports', url:'probench.ca', eb:'SPORTS STORE • CONESTOGA', head:'Gear for every game, fitted in store.', sub:'Skates sharpened, sticks cut and cleats sized while you wait.', cta:'Shop gear', l:'grid', f:'swiss', p:[7,6,9], it:[['Hockey skates','Heat molded','$299'],['Soccer ball','Match grade','$45'],['Court shoes','New season','$169'],['Sharpening','While you wait','$12']] },
+    { id:'halo', c:'beauty', k:'Hair salon', name:'Halo Hair Studio', url:'halohair.ca', eb:'SALON • UPTOWN', head:'Fresh cuts, booked in seconds.', sub:'Pick your stylist and your time. Reminders by text.', cta:'Book a cut', l:'booking', f:'luxe', p:[8,3,0], svc:'Cut + style · 60 min' },
+    { id:'stillwater', c:'beauty', k:'Day spa', name:'Still Water Spa', url:'stillwaterspa.ca', eb:'DAY SPA • ST. JACOBS', head:'An hour that feels like a weekend.', sub:'Massage, facials and couples packages in a quiet country spa.', cta:'Book a treatment', l:'booking', f:'luxe', p:[11,0,8], svc:'Relaxation massage · 75 min' },
+    { id:'fade', c:'beauty', k:'Barber', name:'Fade District', url:'fadedistrict.ca', eb:'BARBER • KING ST', head:'Sharp fades. No waiting around.', sub:'Walk-ins welcome, or lock in your chair online.', cta:'Grab a chair', l:'booking', f:'street', p:[2,7,1], svc:'Skin fade · 30 min' },
+    { id:'pulse', c:'events', k:'DJ', name:'Pulse Events', url:'pulseevents.ca', eb:'DJ • WEDDINGS + PARTIES', head:'Your night, your playlist.', sub:'Weddings, galas and birthdays across Waterloo Region.', cta:'Check my date', l:'split', f:'retro', p:[5,2,9], photo:'PHOTO • DANCE FLOOR', it:[['1','planning call'],['4 hr','base set'],['Full','light rig']] },
+    { id:'foundry', c:'events', k:'Event venue', name:'The Foundry Hall', url:'foundryhall.ca', eb:'VENUE • GALT', head:'A brick hall for your big day.', sub:'Weddings and corporate events for up to 220 guests.', cta:'Book a tour', l:'booking', f:'luxe', p:[1,3,11], svc:'Venue tour · 30 min' },
+    { id:'ledger', c:'pro', k:'Accounting', name:'Ledger & Co.', url:'ledgerandco.ca', eb:'ACCOUNTING • CAMBRIDGE', head:'Taxes done. Weekends back.', sub:'Personal and small business returns, filed on time.', cta:'Book a call', l:'split', f:'mono', p:[11,3,1], photo:'PHOTO • THE TEAM', it:[['48 h','reply'],['T1 + T2','returns'],['Flat','fees']] },
+    { id:'hartwell', c:'pro', k:'Law firm', name:'Hartwell Law', url:'hartwelllaw.ca', eb:'REAL ESTATE + WILLS • KITCHENER', head:'Clear answers. Fair, flat fees.', sub:'Closings, wills and powers of attorney, explained in plain words.', cta:'Book a consult', l:'split', f:'luxe', p:[1,3,0], photo:'PHOTO • OFFICE', it:[['Flat','closing fees'],['Same week','wills'],['Free','first call']] },
+    { id:'keystone', c:'pro', k:'Mortgage', name:'Keystone Mortgages', url:'keystonemortgages.ca', eb:'MORTGAGE • WATERLOO REGION', head:'Find out what you qualify for.', sub:'Dozens of lenders compared. No cost for advice to start.', cta:'Get my options', l:'menu', f:'display', p:[0,1,6], pt:'SAMPLE RATES', it:[['5-year fixed','Insured','4.29%'],['3-year fixed','Insured','4.19%'],['5-year variable','Insured','4.45%']] },
+    { id:'birch', c:'pro', k:'Real estate', name:'Birch Lane Realty', url:'birchlanerealty.ca', eb:'REAL ESTATE • KW', head:'Homes that fit how you live.', sub:'New listings every morning, tours booked online.', cta:'See listings', l:'grid', f:'swiss', p:[3,0,1], it:[['3 bed semi','Kitchener','$689K'],['2 bed condo','Uptown','$499K'],['4 bed detached','Waterloo','$1.1M'],['Townhouse','Cambridge','$615K']] },
+    { id:'brightwire', c:'trades', k:'Electrician', name:'Brightwire Electric', url:'brightwire.ca', eb:'ELECTRICIAN • WATERLOO', head:'Wired right the first time.', sub:'Licensed electricians for panels, pot lights and EV chargers.', cta:'Get a quote', l:'booking', f:'swiss', p:[10,7,4], svc:'Panel inspection · 2 hrs' },
+    { id:'clearflow', c:'trades', k:'Plumber', name:'Clearflow Plumbing', url:'clearflow.ca', eb:'PLUMBING • 24/7', head:'Leak at 2 am? We pick up.', sub:'Emergency calls, drains and water heaters across the region.', cta:'Call a plumber', l:'booking', f:'friendly', p:[9,3,4], svc:'Emergency visit · Today' },
+    { id:'fieldstone', c:'trades', k:'Landscaping', name:'Fieldstone Landscaping', url:'fieldstone.ca', eb:'LANDSCAPING • ELMIRA', head:'A backyard you actually use.', sub:'Patios, walls and gardens designed and built by one crew.', cta:'Get a free quote', l:'split', f:'display', p:[6,0,10], photo:'PHOTO • BACKYARD BUILD', it:[['Spring','cleanups'],['Patios','and walls'],['Free','quotes']] },
+    { id:'ironworks', c:'health', k:'Gym', name:'Ironworks Gym', url:'ironworksgym.ca', eb:'GYM • 24 HOURS', head:'Stronger every week. Coached.', sub:'Open gym, small classes and personal training.', cta:'Try a free class', l:'score', f:'street', p:[2,7,5], pt:'CLASSES TODAY', it:[['Strength 101','Coach Sam','6:00','AM'],['HIIT 45','Coach Ria','12:15','PM'],['Open lift','No coach','ALL','DAY']] },
+    { id:'brightsmile', c:'health', k:'Dental', name:'Bright Smile Dental', url:'brightsmile.ca', eb:'DENTAL • FAMILY + KIDS', head:'Gentle checkups for the whole family.', sub:'New patients welcome. We bill your insurance directly.', cta:'Book a visit', l:'booking', f:'friendly', p:[4,3,9], svc:'Cleaning + checkup · 60 min' },
+    { id:'torque', c:'auto', k:'Auto repair', name:'Torque Auto Care', url:'torqueauto.ca', eb:'AUTO REPAIR • KITCHENER', head:'Honest repairs, quoted up front.', sub:'Book online, get updates by text, pay when it is done.', cta:'Book service', l:'booking', f:'mono', p:[2,10,7], svc:'Oil change · 30 min' },
+    { id:'northline', c:'auto', k:'Car dealer', name:'Northline Motors', url:'northlinemotors.ca', eb:'USED CARS • CAMBRIDGE', head:'Certified cars. No haggling.', sub:'Every car inspected, priced fairly and ready for a test drive.', cta:'See inventory', l:'grid', f:'swiss', p:[9,7,3], it:[['2022 RAV4','41,000 km','$33,900'],['2021 Civic','52,000 km','$24,500'],['2020 F-150','68,000 km','$38,900'],['2023 Kona','18,000 km','$27,400']] }
+  ];
+  lum(x) { const n = parseInt(x.slice(1), 16); return (.2126 * (n >> 16) + .7152 * ((n >> 8) & 255) + .0722 * (n & 255)) / 255; }
+  heroDef(i, c) {
+    const b = { cols: 'minmax(0,1fr)', rows: 'minmax(0,1fr)', areas: "'txt'", gap: '4cqw', pad: '1.6cqw 4cqw 4cqw', ph: 'none', phArea: 'ph', phR: '2cqw', phLabel: c.muted, txt: 'flex', shade: 'none', pnl: 'none', tile: 'none', band: 'none', align: 'flex-start', justify: 'center', ta: 'left', head: '5cqw', txtBg: 'transparent', txtFg: c.fg, txtMuted: c.muted, txtPad: '0', txtR: '0', subW: '100%' };
+    const v = [
+      { cols: 'minmax(0,1.05fr) minmax(0,1fr)', areas: "'txt pnl'", pnl: 'block' },
+      { pad: '0', ph: 'block', phArea: 'txt', phR: '0', phLabel: '#ffffff', shade: 'block', justify: 'flex-end', txtFg: '#ffffff', txtMuted: '#f2f2f2', txtPad: '4cqw 6cqw 6cqw', head: '6cqw', subW: '60%' },
+      { head: '9.5cqw', subW: '62%' },
+      { pad: '1.6cqw 12cqw 4cqw', align: 'center', ta: 'center', txtBg: c.surface, txtPad: '4cqw 6cqw', txtR: '3cqw', head: '5.6cqw' },
+      { cols: 'minmax(0,1.2fr) minmax(0,1fr)', rows: 'minmax(0,1fr) minmax(0,1fr)', areas: "'txt ph' 'txt tile'", gap: '2cqw', ph: 'block', tile: 'flex', justify: 'flex-end', txtBg: c.surface, txtPad: '4cqw', txtR: '2cqw' },
+      { rows: 'minmax(0,1fr) auto', areas: "'txt' 'band'", band: 'flex', head: '6.6cqw', subW: '70%' },
+      { pad: '0', ph: 'block', phArea: 'txt', phR: '0', phLabel: '#ffffff', shade: 'block', justify: 'flex-end', txtFg: '#ffffff', txtMuted: '#f2f2f2', txtPad: '4cqw 6cqw 5cqw', gap: '2cqw' },
+      { txt: 'none', pad: '0' }
+    ][i];
+    return { ...b, ...v };
+  }
+  set(key, id, val) { this.setState(s => ({ [key]: { ...s[key], [id]: val } })); }
+  build(t) {
+    const pi = this.state.pal[t.id] ?? 0, fi = this.state.font[t.id] ?? this.FMAP[t.f], hi = this.state.hero[t.id] ?? (t.hd ?? 0), dk = !!this.state.dark[t.id];
+    const q0 = this.P[t.p[pi]];
+    let q = q0;
+    if (dk) { let a = q0[2], on = q0[3]; if (this.lum(a) < .25) { a = '#f4f2ee'; on = '#111111'; } q = ['#121212', '#f4f2ee', a, on, '#1f1f1f', '#b9b5ad', a]; }
+    const F = this.FONTS[fi], cat = this.CATS.find(c => c[0] === t.c);
+    const slots = ['9:00', '10:30', '12:00', '1:30', '3:00', '4:30'];
+    const items = t.l === 'booking'
+      ? slots.map((a, i) => i === 2 ? { a, bg: q[2], fg: q[3], ring: q[2] } : { a, bg: q[0], fg: q[1], ring: q[1] + '22' })
+      : t.it.map(x => ({ a: x[0], b: x[1], c: x[2], d: x[3] }));
+    const look = t.name + ' · Colour ' + (pi + 1) + ' · ' + F[0] + ' fonts · ' + this.HEROES[hi] + ' hero · ' + (dk ? 'Dark' : 'Light');
+    const ch = (label, on, pick) => ({ label, pick, pressed: on ? 'true' : 'false', bg: on ? '#111111' : 'transparent', fg: on ? '#f7f4ee' : '#111111' });
+    const as = t.as || this.ASSIST[t.c], live = this.state.pv === t.id && hi === 6;
+    const typed = live ? as[0].slice(0, this.state.typeN) : as[0];
+    const isCar = hi === 7, ca = this.state.car[t.id] ?? 0;
+    return {
+      isCarousel: isCar, rootBg: isCar ? this.CARC[ca][0] : q[0], ghost: (t.cd || this.CAR[t.c])[0], car: this.carItems(t),
+      carTitle: t.name.toUpperCase(), carPrev: () => this.carGo(t.id, -1), carNext: () => this.carGo(t.id, 1),
+      interactive: false, notInteractive: true,
+      isAssist: hi === 6, notAssist: hi !== 6, greet1: 'Hey there, meet the ' + t.name + ' helper,', greet2: 'here to get you sorted in seconds.',
+      typed, cursor: live && typed.length < as[0].length ? 'inline-block' : 'none', pills: as[1], email: 'hello@' + t.url,
+      pt: 'PICK A TIME', photo: 'PHOTO • ' + t.k.toUpperCase(), ...t,
+      kind: t.k.toUpperCase(), eyebrow: t.eb, fontD: F[1], fontB: F[2], fw: F[3], rad: F[4], radSm: F[5],
+      bg: q[0], fg: q[1], accent: q[2], on: q[3], surface: q[4], muted: q[5], accentText: q[6], line: q[1] + '22', stripeA: q[4], stripeB: q[0],
+      n1: cat[3][0], n2: cat[3][1], n3: cat[3][2], items,
+      isMenu: t.l === 'menu', isGrid: t.l === 'grid', isScore: t.l === 'score', isBooking: t.l === 'booking', isSplit: t.l === 'split',
+      h: this.heroDef(hi, { fg: q[1], muted: q[5], surface: q[4] }),
+      bandText: Array(4).fill(t.eb).join('  •  '),
+      fontIdx: String(fi), heroIdx: String(hi), modeLabel: dk ? 'Dark' : 'Light', darkPressed: dk ? 'true' : 'false',
+      onFontSel: e => this.set('font', t.id, +e.target.value), onHeroSel: e => this.set('hero', t.id, +e.target.value),
+      toggleDark: () => this.set('dark', t.id, !dk),
+      open: () => this.setState({ pv: t.id }),
+      startHref: 'Melod%20Studio%20Site%20v2.dc.html?template=' + t.id + '&look=' + encodeURIComponent(look) + '#contact',
+      sw: t.p.map((pk, i) => ({ bg: this.P[pk][0], accent: this.P[pk][2], label: 'Colour option ' + (i + 1), pressed: i === pi ? 'true' : 'false', ring: i === pi ? '0 0 0 2px #ffffff,0 0 0 4px #111111' : '0 0 0 1px rgba(0,0,0,.25)', pick: () => this.set('pal', t.id, i) })),
+      fontChips: this.FONTS.map((f, i) => ch(f[0], i === fi, () => this.set('font', t.id, i))),
+      heroChips: this.HEROES.map((x, i) => ch(x, i === hi, () => this.set('hero', t.id, i))),
+      modeChips: [ch('Light', !dk, () => this.set('dark', t.id, false)), ch('Dark', dk, () => this.set('dark', t.id, true))]
+    };
+  }
+  componentDidMount() {
+    const c = new URLSearchParams(location.search).get('cat');
+    if (c && this.CATS.some(x => x[0] === c)) this.setState({ cat: c });
+    this.onKey = e => { if (e.key === 'Escape' && this.state.pv) this.setState({ pv: null }); };
+    window.addEventListener('keydown', this.onKey);
+    this.onMove = e => { const el = this.pvRef.current; if (el) el.style.setProperty('--scrub', (e.clientX / innerWidth).toFixed(3)); };
+    window.addEventListener('pointermove', this.onMove);
+  }
+  componentDidUpdate(_, ps) {
+    if (ps.pv !== this.state.pv) document.body.style.overflow = this.state.pv ? 'hidden' : '';
+    const hd = id => (this.T.find(x => x.id === id) || {}).hd ?? 0;
+    const k = this.state.pv ? this.state.pv + ':' + (this.state.hero[this.state.pv] ?? hd(this.state.pv)) : '';
+    const pk = ps.pv ? ps.pv + ':' + (ps.hero[ps.pv] ?? hd(ps.pv)) : '';
+    if (k !== pk && k.endsWith(':6')) this.restartType();
+  }
+  componentWillUnmount() { clearTimeout(this.tt); clearInterval(this.ti); window.removeEventListener('pointermove', this.onMove); window.removeEventListener('keydown', this.onKey); document.body.style.overflow = ''; }
+  renderVals() {
+    const cur = this.state.cat;
+    const chip = (id, label, n) => ({ label, n, pressed: cur === id ? 'true' : 'false', bg: cur === id ? '#111111' : 'transparent', fg: cur === id ? '#f7f4ee' : '#111111', pick: () => this.setState({ cat: id }) });
+    const cats = [chip(null, 'All', this.T.length), ...this.CATS.map(c => chip(c[0], c[1], this.T.filter(t => t.c === c[0]).length))];
+    const groups = this.CATS.filter(c => cur === null || c[0] === cur).map(c => ({ label: c[1], sub: c[2], items: this.T.filter(t => t.c === c[0]).map(t => this.build(t)) }));
+    const pvT = this.state.pv && this.T.find(t => t.id === this.state.pv);
+    return {
+      cats, groups, minW: 420, countLine: this.T.length + ' demo sites across ' + this.CATS.length + ' industries.',
+      fontOpts: this.FONTS.map((f, i) => ({ v: String(i), label: f[0] + ' fonts' })),
+      heroOpts: this.HEROES.map((x, i) => ({ v: String(i), label: x })),
+      hasPv: !!pvT, pvRef: this.pvRef, pv: pvT ? { ...this.build(pvT), interactive: true, notInteractive: false } : null, closePv: () => this.setState({ pv: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

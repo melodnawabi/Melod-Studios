@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/typography.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/colors.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/styles.css">
+<script src="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/_ds_bundle.js"></script>
+<style>@keyframes tcBlink{0%,100%{opacity:1}50%{opacity:0}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+</helmet>
+<div style="container-type:inline-size;position:relative;aspect-ratio:16/11;border-radius:var(--radius-lg);overflow:hidden;background:{{ t.rootBg }};color:{{ t.fg }};box-shadow:0 30px 50px -24px rgba(6,43,46,.55);display:flex;flex-direction:column;transition:background-color 650ms cubic-bezier(.4,0,.2,1),color .3s">
+  <div style="flex:none;display:flex;align-items:center;gap:1.2cqw;padding:1.5cqw 2cqw;background:#111111"><span style="width:1.4cqw;height:1.4cqw;border-radius:999px;background:var(--magenta)"></span><span style="width:1.4cqw;height:1.4cqw;border-radius:999px;background:var(--ground)"></span><span style="width:1.4cqw;height:1.4cqw;border-radius:999px;background:#f7f4ee"></span><span style="margin-left:2cqw;padding:.8cqw 2cqw;border-radius:999px;background:#2b2b2b;color:#f7f4ee;font:500 1.6cqw/1 var(--font-mono)">{{ t.url }}</span></div>
+  <div style="flex:none;display:flex;justify-content:space-between;align-items:center;gap:2cqw;padding:2.4cqw 4cqw">
+    <span style="font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:3cqw;line-height:1;white-space:nowrap">{{ t.name }}</span>
+    <span style="display:flex;gap:2.4cqw;align-items:center;font:600 1.6cqw/1 {{ t.fontB }}"><span>{{ t.n1 }}</span><span>{{ t.n2 }}</span><span>{{ t.n3 }}</span><span style="padding:1.1cqw 2cqw;border-radius:{{ t.rad }};background:{{ t.accent }};color:{{ t.on }};white-space:nowrap">{{ t.cta }}</span></span>
+  </div>
+  <div style="flex:1;min-height:0;position:relative;display:grid;grid-template-columns:{{ t.h.cols }};grid-template-rows:{{ t.h.rows }};grid-template-areas:{{ t.h.areas }};gap:{{ t.h.gap }};padding:{{ t.h.pad }}">
+    <div style="grid-area:{{ t.h.phArea }};display:{{ t.h.ph }};position:relative;overflow:hidden;border-radius:{{ t.h.phR }};background:repeating-linear-gradient(45deg,{{ t.stripeA }} 0 1cqw,{{ t.stripeB }} 1cqw 2cqw);background-position:calc(var(--scrub,0) * 40cqw) 0">
+      <span style="position:absolute;inset:0;display:{{ t.h.shade }};background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.18))"></span>
+      <span style="position:absolute;right:1.6cqw;top:1.6cqw;font:600 1.3cqw/1 var(--font-mono);color:{{ t.h.phLabel }}">{{ t.photo }}</span>
+    </div>
+    <div style="grid-area:txt;position:relative;z-index:1;min-width:0;display:{{ t.h.txt }};flex-direction:column;gap:2cqw;align-items:{{ t.h.align }};justify-content:{{ t.h.justify }};text-align:{{ t.h.ta }};padding:{{ t.h.txtPad }};border-radius:{{ t.h.txtR }};background:{{ t.h.txtBg }};color:{{ t.h.txtFg }}">
+      <sc-if value="{{ t.isAssist }}" hint-placeholder-val="{{ false }}">
+        <span aria-hidden="true" style="font:400 2.4cqw/1.3 {{ t.fontB }};color:#ffffff;filter:blur(.45cqw);user-select:none">{{ t.greet1 }}<br>{{ t.greet2 }}</span>
+        <span style="font:400 2.6cqw/1.35 {{ t.fontB }};color:#ffffff;min-height:7cqw;max-width:62cqw">{{ t.typed }}<span style="display:{{ t.cursor }};width:.3cqw;height:1.1em;margin-left:.3cqw;vertical-align:middle;background:#ffffff;animation:tcBlink 1s step-end infinite"></span></span>
+        <div style="display:flex;flex-wrap:wrap;gap:1cqw;max-width:70cqw">
+          <sc-for list="{{ t.pills }}" as="p" hint-placeholder-count="4">
+            <span style="padding:.7cqw 2.4cqw;border-radius:999px;background:#ffffff;color:#111111;font:500 1.7cqw/1.4 {{ t.fontB }};white-space:nowrap">{{ p }}</span>
+          </sc-for>
+          <span style="display:inline-flex;align-items:center;gap:1.4cqw;padding:.7cqw 2.4cqw;border-radius:999px;border:.2cqw solid #ffffff;color:#ffffff;font:500 1.7cqw/1.4 {{ t.fontB }};white-space:nowrap">Reach us: <span style="text-decoration:underline;text-underline-offset:.3cqw">{{ t.email }}</span><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.6cqw;height:1.6cqw"><rect x="8" y="8" width="14" height="14" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></span>
+        </div>
+      </sc-if>
+      <sc-if value="{{ t.notAssist }}" hint-placeholder-val="{{ true }}">
+        <span style="font:600 1.4cqw/1.3 var(--font-mono);letter-spacing:.14em;color:{{ t.h.txtMuted }}">{{ t.eyebrow }}</span>
+        <span style="font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:{{ t.h.head }};line-height:1.08;letter-spacing:-.01em;text-wrap:balance">{{ t.head }}</span>
+        <span style="font:500 1.8cqw/1.45 {{ t.fontB }};color:{{ t.h.txtMuted }};max-width:{{ t.h.subW }}">{{ t.sub }}</span>
+        <span style="padding:1.5cqw 3cqw;border-radius:{{ t.rad }};background:{{ t.accent }};color:{{ t.on }};font:700 1.8cqw/1 {{ t.fontB }};white-space:nowrap">{{ t.cta }}</span>
+      </sc-if>
+    </div>
+    <div style="grid-area:pnl;display:{{ t.h.pnl }};min-width:0;align-self:center">
+      <sc-if value="{{ t.isMenu }}" hint-placeholder-val="{{ false }}">
+        <div style="background:{{ t.surface }};border-radius:2cqw;padding:3cqw;display:flex;flex-direction:column;gap:2cqw">
+          <span style="font:600 1.4cqw/1 var(--font-mono);letter-spacing:.14em;color:{{ t.muted }}">{{ t.pt }}</span>
+          <sc-for list="{{ t.items }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:2cqw;padding-bottom:1.6cqw;border-bottom:.2cqw solid {{ t.line }}"><span style="display:flex;flex-direction:column;gap:.6cqw"><b style="font:700 1.9cqw/1.2 {{ t.fontB }}">{{ it.a }}</b><span style="font:500 1.5cqw/1.2 {{ t.fontB }};color:{{ t.muted }}">{{ it.b }}</span></span><span style="font:600 1.9cqw/1 var(--font-mono);white-space:nowrap">{{ it.c }}</span></div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ t.isGrid }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2cqw">
+          <sc-for list="{{ t.items }}" as="it" hint-placeholder-count="4">
+            <div style="background:{{ t.surface }};border-radius:1.6cqw;padding:1.4cqw;display:flex;flex-direction:column;gap:1cqw">
+              <span style="aspect-ratio:16/9;border-radius:1cqw;background:repeating-linear-gradient(45deg,{{ t.stripeA }} 0 .8cqw,{{ t.stripeB }} .8cqw 1.6cqw)"></span>
+              <b style="font:700 1.6cqw/1.15 {{ t.fontB }}">{{ it.a }}</b>
+              <span style="display:flex;justify-content:space-between;gap:1cqw;font:500 1.3cqw/1 {{ t.fontB }};color:{{ t.muted }}">{{ it.b }}<b style="font:600 1.6cqw/1 var(--font-mono);color:{{ t.fg }};white-space:nowrap">{{ it.c }}</b></span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ t.isScore }}" hint-placeholder-val="{{ false }}">
+        <div style="background:{{ t.surface }};border-radius:2cqw;padding:3cqw;display:flex;flex-direction:column;gap:2cqw">
+          <span style="font:600 1.4cqw/1 var(--font-mono);letter-spacing:.14em;color:{{ t.muted }}">{{ t.pt }}</span>
+          <sc-for list="{{ t.items }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:2cqw;padding-bottom:1.6cqw;border-bottom:.2cqw solid {{ t.line }}"><span style="display:flex;flex-direction:column;gap:.6cqw"><b style="font:700 1.9cqw/1.2 {{ t.fontB }}">{{ it.a }}</b><span style="font:500 1.4cqw/1.2 {{ t.fontB }};color:{{ t.muted }}">{{ it.b }}</span></span><span style="display:flex;flex-direction:column;align-items:flex-end;gap:.6cqw"><b style="font:600 2.4cqw/1 var(--font-mono);white-space:nowrap">{{ it.c }}</b><span style="font:600 1.2cqw/1 var(--font-mono);letter-spacing:.12em;color:{{ t.accentText }};white-space:nowrap">{{ it.d }}</span></span></div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ t.isBooking }}" hint-placeholder-val="{{ false }}">
+        <div style="background:{{ t.surface }};border-radius:2cqw;padding:3cqw;display:flex;flex-direction:column;gap:2cqw">
+          <b style="font:700 2cqw/1.2 {{ t.fontB }}">{{ t.svc }}</b>
+          <span style="font:600 1.4cqw/1 var(--font-mono);letter-spacing:.14em;color:{{ t.muted }}">{{ t.pt }}</span>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqw">
+            <sc-for list="{{ t.items }}" as="it" hint-placeholder-count="6">
+              <span style="padding:1.6cqw 0;text-align:center;border-radius:{{ t.radSm }};background:{{ it.bg }};color:{{ it.fg }};box-shadow:inset 0 0 0 .25cqw {{ it.ring }};font:600 1.6cqw/1 var(--font-mono)">{{ it.a }}</span>
+            </sc-for>
+          </div>
+          <span style="padding:1.8cqw 0;text-align:center;border-radius:{{ t.rad }};background:{{ t.accent }};color:{{ t.on }};font:700 1.8cqw/1 {{ t.fontB }}">Confirm</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{ t.isSplit }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:2cqw">
+          <span style="aspect-ratio:4/3;border-radius:2cqw;background:repeating-linear-gradient(45deg,{{ t.stripeA }} 0 1cqw,{{ t.stripeB }} 1cqw 2cqw);display:flex;align-items:flex-end;padding:1.6cqw;box-sizing:border-box;font:600 1.3cqw/1 var(--font-mono);color:{{ t.muted }}">{{ t.photo }}</span>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqw">
+            <sc-for list="{{ t.items }}" as="it" hint-placeholder-count="3">
+              <span style="display:flex;flex-direction:column;gap:.6cqw"><b style="font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:2.8cqw;line-height:1">{{ it.a }}</b><span style="font:500 1.3cqw/1.2 {{ t.fontB }};color:{{ t.muted }}">{{ it.b }}</span></span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+    <div style="grid-area:tile;display:{{ t.h.tile }};flex-direction:column;justify-content:space-between;border-radius:2cqw;background:{{ t.accent }};color:{{ t.on }};padding:3cqw">
+      <span style="font:600 1.4cqw/1 var(--font-mono);letter-spacing:.14em">{{ t.kind }}</span>
+      <span style="font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:4.4cqw;line-height:1">{{ t.cta }} →</span>
+    </div>
+    <div style="grid-area:band;display:{{ t.h.band }};align-items:center;overflow:hidden;white-space:nowrap;margin:0 -4cqw -4cqw;padding:2.4cqw 4cqw;background:{{ t.accent }};color:{{ t.on }};font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:3.6cqw;line-height:1">{{ t.bandText }}</div>
+    <sc-if value="{{ t.isCarousel }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;inset:0;overflow:hidden">
+        <div aria-hidden="true" style="position:absolute;left:0;right:0;top:6%;z-index:2;text-align:center;font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:17cqw;line-height:1;letter-spacing:-.02em;text-transform:uppercase;white-space:nowrap;color:#ffffff;user-select:none;pointer-events:none">{{ t.ghost }}</div>
+        <sc-for list="{{ t.car }}" as="k" hint-placeholder-count="4">
+          <div style="position:absolute;z-index:{{ k.z }};left:{{ k.left }};bottom:{{ k.bottom }};height:{{ k.height }};aspect-ratio:.6/1;transform:{{ k.tf }};transform-origin:50% 100%;filter:{{ k.blur }};opacity:{{ k.op }};transition:transform 650ms cubic-bezier(.4,0,.2,1),filter 650ms cubic-bezier(.4,0,.2,1),opacity 650ms cubic-bezier(.4,0,.2,1),left 650ms cubic-bezier(.4,0,.2,1),height 650ms cubic-bezier(.4,0,.2,1),bottom 650ms cubic-bezier(.4,0,.2,1);will-change:transform,filter,opacity">
+            <div style="width:100%;height:100%;border-radius:3cqw 3cqw 1cqw 1cqw;background:repeating-linear-gradient(45deg,{{ k.panel }} 0 1cqw,{{ k.bg }} 1cqw 2cqw);box-shadow:0 2cqw 4cqw -2cqw rgba(0,0,0,.35);display:flex;align-items:flex-end;justify-content:center;padding:6%;box-sizing:border-box">
+              <span style="font:600 1.2cqw/1.2 var(--font-mono);letter-spacing:.1em;color:#ffffff;text-align:center;text-transform:uppercase">{{ k.name }}</span>
+            </div>
+          </div>
+        </sc-for>
+        <div style="position:absolute;left:5cqw;bottom:5cqw;z-index:6;max-width:30cqw;display:flex;flex-direction:column;gap:1.4cqw;color:#ffffff">
+          <span style="font:700 2.2cqw/1.1 {{ t.fontB }};letter-spacing:.06em;text-transform:uppercase">{{ t.carTitle }}</span>
+          <span style="font:500 1.4cqw/1.55 {{ t.fontB }}">{{ t.sub }}</span>
+          <div style="display:flex;gap:1.4cqw">
+            <sc-if value="{{ t.interactive }}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{ t.carPrev }}" aria-label="Previous" style="width:5.4cqw;height:5.4cqw;min-width:44px;min-height:44px;border-radius:999px;border:2px solid #ffffff;background:transparent;color:#ffffff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 150ms,background-color 150ms" style-hover="transform:scale(1.08);background-color:rgba(255,255,255,.12)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></button>
+              <button type="button" onClick="{{ t.carNext }}" aria-label="Next" style="width:5.4cqw;height:5.4cqw;min-width:44px;min-height:44px;border-radius:999px;border:2px solid #ffffff;background:transparent;color:#ffffff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform 150ms,background-color 150ms" style-hover="transform:scale(1.08);background-color:rgba(255,255,255,.12)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+            </sc-if>
+            <sc-if value="{{ t.notInteractive }}" hint-placeholder-val="{{ true }}">
+              <span style="width:4.6cqw;height:4.6cqw;border-radius:999px;border:.25cqw solid #ffffff;display:flex;align-items:center;justify-content:center;font:700 2cqw/1 var(--font-sans)">←</span>
+              <span style="width:4.6cqw;height:4.6cqw;border-radius:999px;border:.25cqw solid #ffffff;display:flex;align-items:center;justify-content:center;font:700 2cqw/1 var(--font-sans)">→</span>
+            </sc-if>
+          </div>
+        </div>
+        <span style="position:absolute;right:4cqw;bottom:7cqw;z-index:6;display:flex;align-items:center;gap:1cqw;font-family:{{ t.fontD }};font-weight:{{ t.fw }};font-size:4cqw;line-height:1;letter-spacing:-.02em;text-transform:uppercase;color:#ffffff;white-space:nowrap">{{ t.cta }} →</span>
+        <div aria-hidden="true" style="position:absolute;inset:0;z-index:7;pointer-events:none;opacity:.4;background-size:200px 200px;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E&quot;)"></div>
+      </div>
+    </sc-if>
+  </div>
+  <span style="position:absolute;right:1.6cqw;bottom:1.6cqw;z-index:8;padding:.8cqw 1.4cqw;border-radius:.8cqw;background:rgba(0,0,0,.55);color:#ffffff;font:600 1.2cqw/1 var(--font-mono);letter-spacing:.08em;white-space:nowrap">BUILT BY MELOD STUDIOS ↗</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:640,&quot;height&quot;:440},&quot;t&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;object&quot;}}"></script>
+</body>
+</html>

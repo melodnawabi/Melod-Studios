@@ -1,0 +1,24 @@
+/* Melod Studio core colours (Aqua Pop). Light by default; add data-theme="dark" on a parent for dark. Source: tokens.css */
+:root{
+--ground:#00dcc8;--surface:#12bfcb;--surface-raised:#0aa8b8;--line:#08a9b4;
+--ink:#111111;--ink-muted:#123f43;
+--magenta:#d4006f;--magenta-text:#9e0058;
+--violet:#6200ea;--on-violet:#ffffff;
+--paper:#f7f4ee;--on-paper:#111111;
+--mood-violet:#3a0091;--mood-magenta:#b8005f;
+--success:#004d2a;
+--chart-1:var(--violet);--chart-2:var(--magenta);--chart-3:#111111;
+--text-body:var(--ink);--text-muted:var(--ink-muted);--text-accent:var(--magenta-text);
+--surface-page:var(--ground);--surface-card:var(--surface);--surface-reading:var(--paper);
+--action-primary:var(--violet);--action-on-primary:var(--on-violet);
+--focus-ring:var(--magenta);--border-field:var(--line);
+}
+[data-theme="dark"]{
+--ground:#062b2e;--surface:#0b3d41;--surface-raised:#11504f;--line:#1d6664;
+--ink:#e8fffc;--ink-muted:#a6d9d4;
+--magenta:#ff4fa3;--magenta-text:#ff7ab9;
+--violet:#7c3aed;--on-violet:#ffffff;
+--paper:#14201f;--on-paper:#eef7f5;
+--mood-violet:#2a0a66;--mood-magenta:#a1004f;
+--success:#7cf2b6;--chart-3:#e8fffc;
+}

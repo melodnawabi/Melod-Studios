@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/typography.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/colors.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/palettes.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/components/components.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/styles.css">
+<script src="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/_ds_bundle.js"></script>
+<style>body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}a{color:var(--magenta-text)}a:hover{color:var(--ink)}</style>
+</helmet>
+<div id="top" style="background:var(--ground);color:var(--ink);min-height:100vh">
+<nav style="max-width:var(--container-max);margin:0 auto;padding:var(--space-6) var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;box-sizing:border-box">
+  <a href="Melod%20Studio%20Site%20v2.dc.html" style="font:900 24px/1 var(--font-display);color:var(--ink);text-decoration:none;letter-spacing:-.02em;white-space:nowrap">Melod Studios</a>
+  <div style="display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <a href="Melod%20Studios%20Work.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Work</a>
+    <a href="Melod%20Studios%20Templates.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Templates</a>
+    <a href="Melod%20Studios%20Pricing.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Pricing</a>
+    <a href="Melod%20Studio%20Timeline.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Our story</a>
+    <a href="Melod%20Studio%20Tools.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Resources</a>
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="outline" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="130px,52px">Get in touch</x-import>
+  </div>
+</nav>
+
+<section id="pricing" style="max-width:var(--container-max);margin:0 auto;padding:var(--space-24) var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-12)">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--space-6)">
+    <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:680px">
+      <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Eyebrow" hint-size="200px,16px">Pricing • Four levels</x-import>
+      <h1 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0;text-wrap:balance">Pick how much you want off your plate.</h1>
+    </div>
+    <p style="font:500 17px/27px var(--font-sans);color:var(--ink-muted);margin:0;max-width:36ch">New builds start at $750, Done for you at $1,500. Care plans start at $100 a month. Everything is priced to your build. You get a tailored quote after our free call.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--space-6);align-items:stretch;perspective:1400px">
+    <div style="display:flex">
+      <div class="ms-card" style="flex:1;display:flex;flex-direction:column;gap:var(--space-4);transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div class="ms-card__bar" style="margin:0"></div>
+        <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--magenta-text)">01 • BASIC</span>
+        <h3 style="font:900 32px/1 var(--font-display);letter-spacing:-.02em;margin:0">Touch-up and care</h3>
+        <p style="font:500 15px/24px var(--font-sans);color:var(--ink-muted);margin:0">Ongoing monthly maintenance. I keep your site sharp, updated and working on every screen. Add it to a New build or Done for you.</p>
+        <div style="display:grid;gap:var(--space-2);font:500 14px/22px var(--font-sans)">
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Regular updates and fixes</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Copy, photo and layout touch-ups</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Add-on for Plus or Hands on</span>
+        </div>
+        <span style="margin-top:auto;display:flex;flex-direction:column;gap:2px"><span style="font:500 11px/16px var(--font-mono);letter-spacing:.14em;color:var(--ink-muted)">STARTS AT</span><span style="font:600 30px/1 var(--font-mono);letter-spacing:-.02em;color:var(--ink)">$100<span style="font-size:15px;letter-spacing:0">/month</span></span><span style="font:600 13px/18px var(--font-mono);color:var(--ink)">Ongoing monthly • Add-on available</span></span>
+        <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="outline" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="100%,52px">Ask about Basic</x-import>
+      </div>
+    </div>
+    <div style="display:flex">
+      <div class="ms-card" style="flex:1;display:flex;flex-direction:column;gap:var(--space-4);transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div class="ms-card__bar" style="margin:0"></div>
+        <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--magenta-text)">02 • PLUS</span>
+        <h3 style="font:900 32px/1 var(--font-display);letter-spacing:-.02em;margin:0">New build</h3>
+        <p style="font:500 15px/24px var(--font-sans);color:var(--ink-muted);margin:0">I design and build your website from scratch, then hand it over to you to run.</p>
+        <div style="display:grid;gap:var(--space-2);font:500 14px/22px var(--font-sans)">
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Custom design, built for you</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Web, iPhone and Android layouts</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Handed over at launch</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--magenta-text)">+</b>Add care from $100/month</span>
+        </div>
+        <span style="margin-top:auto;display:flex;flex-direction:column;gap:2px"><span style="font:500 11px/16px var(--font-mono);letter-spacing:.14em;color:var(--ink-muted)">STARTS AT</span><span style="font:600 30px/1 var(--font-mono);letter-spacing:-.02em;color:var(--ink)">$750</span><span style="font:600 13px/18px var(--font-mono);color:var(--ink)">Quoted per build</span></span>
+        <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="outline" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="100%,52px">Ask about Plus</x-import>
+      </div>
+    </div>
+    <div style="display:flex">
+      <div class="ms-card" style="flex:1;display:flex;flex-direction:column;gap:var(--space-4);transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div class="ms-card__bar" style="margin:0"></div>
+        <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--magenta-text)">03 • HANDS ON</span>
+        <h3 style="font:900 32px/1 var(--font-display);letter-spacing:-.02em;margin:0">Done for you</h3>
+        <p style="font:500 15px/24px var(--font-sans);color:var(--ink-muted);margin:0">I do everything, from design and build to getting you found on Google.</p>
+        <div style="display:grid;gap:var(--space-2);font:500 14px/22px var(--font-sans)">
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Everything in Plus</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Full SEO setup and local search</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--success)">✓</b>Google Business Profile</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--magenta-text)">+</b>Add care from $100/month</span>
+        </div>
+        <span style="margin-top:auto;display:flex;flex-direction:column;gap:2px"><span style="font:500 11px/16px var(--font-mono);letter-spacing:.14em;color:var(--ink-muted)">STARTS AT</span><span style="font:600 30px/1 var(--font-mono);letter-spacing:-.02em;color:var(--ink)">$1,500</span><span style="font:600 13px/18px var(--font-mono);color:var(--ink)">Quoted per build</span></span>
+        <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="outline" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="100%,52px">Ask about Hands on</x-import>
+      </div>
+    </div>
+    <div style="display:flex">
+      <div style="flex:1;display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6);border-radius:var(--radius-lg);background:var(--mood-violet);color:#ffffff;box-shadow:var(--shadow-hard);transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="width:40%;height:8px;border-radius:var(--radius-sm);background:var(--magenta)"></span><x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Badge" variant="tag" hint-size="90px,22px">Most care</x-import></div>
+        <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">04 • HANDS ON PLUS</span>
+        <h3 style="font:900 32px/1 var(--font-display);letter-spacing:-.02em;margin:0">I run it all</h3>
+        <p style="font:500 15px/24px var(--font-sans);color:#ffffff;margin:0">A monthly subscription. I build it, then take care of everything after. Updates, SEO, hosting and changes. You just run your business.</p>
+        <div style="display:grid;gap:var(--space-2);font:500 14px/22px var(--font-sans)">
+          <span style="display:flex;gap:8px"><b style="color:var(--ground)">✓</b>Everything in Hands on</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--ground)">✓</b>Ongoing SEO, updates and edits</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--ground)">✓</b>Hosting and upkeep handled</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--ground)">✓</b>$250 a month plus a $500 setup fee</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--ground)">✓</b>12-month minimum</span>
+          <span style="display:flex;gap:8px"><b style="color:var(--ground)">✓</b>Pay the full year ahead and save</span>
+        </div>
+        <span style="margin-top:auto;display:flex;flex-direction:column;gap:2px"><span style="font:500 11px/16px var(--font-mono);letter-spacing:.14em;color:#f7f4ee">STARTS AT</span><span style="font:600 30px/1 var(--font-mono);letter-spacing:-.02em;color:#ffffff">$250<span style="font-size:15px;letter-spacing:0">/month</span></span><span style="font:600 13px/18px var(--font-mono);color:var(--ground)">+ $500 setup • 12-month minimum • Save when you pay the year up front • Early cancellation fee applies</span></span>
+        <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="primary" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="100%,52px">Ask about Hands on Plus</x-import>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--space-6);padding:var(--space-6) var(--space-8);border-radius:var(--radius-lg);background:#111111;color:#f7f4ee">
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">EVERY LEVEL</span><span style="font:800 20px/26px var(--font-sans)">Signed contract before we start</span><span style="font:400 15px/24px var(--font-sans);color:#f7f4ee">Scope, timeline and price in writing, so we both know exactly what's coming.</span></div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">EVERY LEVEL</span><span style="font:800 20px/26px var(--font-sans)">50%+ non-refundable deposit</span><span style="font:400 15px/24px var(--font-sans);color:#f7f4ee">Half or more of the quote is paid up front to book your spot. It holds my time for your project.</span></div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-2)"><span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">EVERY BUILD</span><span style="font:800 20px/26px var(--font-sans)">"Built by Melod Studios" credit</span><span style="font:400 15px/24px var(--font-sans);color:#f7f4ee">A small credit sits in the bottom-right corner of every page and links back to Melod Studios. It stays on every build. Removal is available on request.</span></div>
+  </div>
+</section>
+
+<section style="background:var(--mood-magenta);color:#ffffff;padding:var(--space-24) 0">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-6);align-items:flex-start">
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:#ffffff">NOT SURE WHICH LEVEL?</span>
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0;max-width:16ch;text-wrap:balance">Tell me about your business. I'll tell you what fits.</h2>
+    <p style="font:500 19px/30px var(--font-sans);margin:0;max-width:44ch;color:#ffffff">15-minute free call. You get a quote tailored to your build within a day.</p>
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="primary" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="190px,52px">Book a free call</x-import>
+  </div>
+</section>
+
+<footer style="background:#111111;color:#f7f4ee;padding:var(--space-12) 0">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <a href="Melod%20Studio%20Site%20v2.dc.html" style="font:900 24px/1 var(--font-display);letter-spacing:-.02em;color:#f7f4ee;text-decoration:none">Melod Studios</a>
+    <div style="display:flex;gap:var(--space-6);flex-wrap:wrap;font:600 15px/20px var(--font-sans)"><a href="Melod%20Studios%20Work.dc.html" style="color:#f7f4ee">Work</a><a href="Melod%20Studios%20Templates.dc.html" style="color:#f7f4ee">Templates</a><a href="Melod%20Studios%20Pricing.dc.html" style="color:#f7f4ee">Pricing</a><a href="Melod%20Studio%20Timeline.dc.html" style="color:#f7f4ee">Our story</a><a href="Melod%20Studio%20Tools.dc.html" style="color:#f7f4ee">Resources</a><a href="Melod%20Studio%20Site%20v2.dc.html#contact" style="color:#f7f4ee">Contact</a></div>
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">WEB • IPHONE • ANDROID • SEO • WATERLOO REGION</span>
+  </div>
+</footer>
+<a href="#top" style="position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--radius-md);background:#111111;color:#f7f4ee;text-decoration:none;font:600 11px/1 var(--font-mono);letter-spacing:.1em;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)"><span style="width:8px;height:8px;border-radius:999px;background:var(--magenta)"></span>BUILT BY MELOD STUDIOS</a>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,388 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/actions/**",
+              "components/brand/**",
+              "components/content/**",
+              "components/forms/**",
+              "components/labels/**",
+              "components/navigation/**",
+              "ui_kits/remix-lab/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Fraunces|Manrope|JetBrains Mono|Cormorant Garamond|Sora|Anton|Inter Tight|Bricolage Grotesque|DM Sans|Archivo Black|Archivo|Shrikhand|Space Grotesk|Space Mono|IBM Plex Sans))/i]",
+        "message": "Font not provided by the design system. Available: Fraunces, Manrope, JetBrains Mono, Cormorant Garamond, Sora, Anton, Inter Tight, Bricolage Grotesque, DM Sans, Archivo Black, Archivo, Shrikhand, Space Grotesk, Space Mono, IBM Plex Sans."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|dot|children|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: variant, dot, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:pill|tag)$/]",
+        "message": "<Badge> variant must be one of 'pill' | 'tag'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|href|children|icon|disabled|type|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, href, children, icon, disabled, type, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|outline|text)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'outline' | 'text'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit|reset)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit' | 'reset'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|children|bar|lines|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: title, children, bar, lines, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Cover'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|tagline|style|key|ref|className|style|children)$/]",
+        "message": "<Cover> doesn't accept that prop. Declared props: title, tagline, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:parts|children|as|style|key|ref|className|style|children)$/]",
+        "message": "<Eyebrow> doesn't accept that prop. Declared props: parts, children, as, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:p|span|div)$/]",
+        "message": "<Eyebrow> as must be one of 'p' | 'span' | 'div'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FormField'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|helper|id|type|value|defaultValue|placeholder|onChange|style|key|ref|className|style|children)$/]",
+        "message": "<FormField> doesn't accept that prop. Declared props: label, helper, id, type, value, defaultValue, placeholder, onChange, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatTile'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|delta|style|key|ref|className|style|children)$/]",
+        "message": "<StatTile> doesn't accept that prop. Declared props: value, label, delta, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TabStrip'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|current|onSelect|style|key|ref|className|style|children)$/]",
+        "message": "<TabStrip> doesn't accept that prop. Declared props: items, current, onSelect, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TrustRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:facts|avatars|count|countLabel|style|key|ref|className|style|children)$/]",
+        "message": "<TrustRow> doesn't accept that prop. Declared props: facts, avatars, count, countLabel, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Cover": {
+        "replaces": []
+      },
+      "Eyebrow": {
+        "replaces": []
+      },
+      "FormField": {
+        "replaces": []
+      },
+      "StatTile": {
+        "replaces": []
+      },
+      "TabStrip": {
+        "replaces": []
+      },
+      "TrustRow": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--action-on-primary",
+      "--action-primary",
+      "--blush-accent",
+      "--blush-bg",
+      "--blush-hl",
+      "--border-field",
+      "--chart-1",
+      "--chart-2",
+      "--chart-3",
+      "--citrus-accent",
+      "--citrus-bg",
+      "--citrus-hl",
+      "--clay-accent",
+      "--clay-bg",
+      "--clay-hl",
+      "--container-max",
+      "--diner-accent",
+      "--diner-bg",
+      "--diner-hl",
+      "--duration-fade",
+      "--financial-accent",
+      "--financial-bg",
+      "--financial-hl",
+      "--focus-ring",
+      "--font-display",
+      "--font-friendly-body",
+      "--font-friendly-display",
+      "--font-luxe-body",
+      "--font-luxe-display",
+      "--font-mono",
+      "--font-monotech-body",
+      "--font-monotech-display",
+      "--font-retro-body",
+      "--font-retro-display",
+      "--font-sans",
+      "--font-street-body",
+      "--font-street-display",
+      "--font-swiss-body",
+      "--font-swiss-display",
+      "--font-yours-display",
+      "--forest-accent",
+      "--forest-bg",
+      "--forest-hl",
+      "--ground",
+      "--gutter",
+      "--gutter-mobile",
+      "--ink",
+      "--ink-muted",
+      "--lift-hover",
+      "--line",
+      "--magenta",
+      "--magenta-text",
+      "--mono-accent",
+      "--mono-bg",
+      "--mood-magenta",
+      "--mood-violet",
+      "--navygold-accent",
+      "--navygold-bg",
+      "--navygold-hl",
+      "--neon-accent",
+      "--neon-bg",
+      "--neon-hl",
+      "--ocean-accent",
+      "--ocean-bg",
+      "--ocean-hl",
+      "--on-paper",
+      "--on-violet",
+      "--paper",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xl",
+      "--reveal-distance",
+      "--shadow-card",
+      "--shadow-hard",
+      "--space-1",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-24",
+      "--space-3",
+      "--space-4",
+      "--space-6",
+      "--space-8",
+      "--success",
+      "--surface",
+      "--surface-card",
+      "--surface-page",
+      "--surface-raised",
+      "--surface-reading",
+      "--text-accent",
+      "--text-body",
+      "--text-muted",
+      "--type-body",
+      "--type-body-lh",
+      "--type-card-title",
+      "--type-display-lg",
+      "--type-display-lh",
+      "--type-display-ls",
+      "--type-display-xl",
+      "--type-eyebrow",
+      "--type-eyebrow-ls",
+      "--type-h2",
+      "--type-h3",
+      "--type-lead",
+      "--type-lead-lh",
+      "--type-small",
+      "--type-small-lh",
+      "--type-stat",
+      "--type-sub",
+      "--type-sub-lh",
+      "--violet"
+    ],
+    "tokenKinds": {
+      "--font-display": "font",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--font-luxe-display": "font",
+      "--font-luxe-body": "font",
+      "--font-street-display": "font",
+      "--font-street-body": "font",
+      "--font-friendly-display": "font",
+      "--font-friendly-body": "font",
+      "--font-swiss-display": "font",
+      "--font-swiss-body": "font",
+      "--font-retro-display": "font",
+      "--font-retro-body": "font",
+      "--font-monotech-display": "font",
+      "--font-monotech-body": "font",
+      "--font-yours-display": "font",
+      "--type-display-xl": "font",
+      "--type-display-lg": "font",
+      "--type-display-lh": "font",
+      "--type-display-ls": "font",
+      "--type-h2": "font",
+      "--type-h3": "font",
+      "--type-card-title": "font",
+      "--type-lead": "font",
+      "--type-lead-lh": "font",
+      "--type-sub": "font",
+      "--type-sub-lh": "font",
+      "--type-body": "font",
+      "--type-body-lh": "font",
+      "--type-small": "font",
+      "--type-small-lh": "font",
+      "--type-eyebrow": "font",
+      "--type-eyebrow-ls": "font",
+      "--type-stat": "font",
+      "--ground": "color",
+      "--surface": "color",
+      "--surface-raised": "color",
+      "--line": "color",
+      "--ink": "color",
+      "--ink-muted": "color",
+      "--magenta": "color",
+      "--magenta-text": "font",
+      "--violet": "color",
+      "--on-violet": "color",
+      "--paper": "color",
+      "--on-paper": "color",
+      "--mood-violet": "color",
+      "--mood-magenta": "color",
+      "--success": "color",
+      "--chart-1": "color",
+      "--chart-2": "color",
+      "--chart-3": "color",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-accent": "font",
+      "--surface-page": "color",
+      "--surface-card": "color",
+      "--surface-reading": "color",
+      "--action-primary": "color",
+      "--action-on-primary": "color",
+      "--focus-ring": "color",
+      "--border-field": "color",
+      "--neon-bg": "color",
+      "--neon-accent": "color",
+      "--neon-hl": "color",
+      "--diner-bg": "color",
+      "--diner-accent": "color",
+      "--diner-hl": "color",
+      "--forest-bg": "color",
+      "--forest-accent": "color",
+      "--forest-hl": "color",
+      "--blush-bg": "color",
+      "--blush-accent": "color",
+      "--blush-hl": "color",
+      "--mono-bg": "color",
+      "--mono-accent": "color",
+      "--ocean-bg": "color",
+      "--ocean-accent": "color",
+      "--ocean-hl": "color",
+      "--navygold-bg": "color",
+      "--navygold-accent": "color",
+      "--navygold-hl": "color",
+      "--citrus-bg": "color",
+      "--citrus-accent": "color",
+      "--citrus-hl": "color",
+      "--clay-bg": "color",
+      "--clay-accent": "color",
+      "--clay-hl": "color",
+      "--financial-bg": "color",
+      "--financial-accent": "color",
+      "--financial-hl": "color",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--space-24": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-xl": "radius",
+      "--radius-pill": "radius",
+      "--shadow-card": "shadow",
+      "--shadow-hard": "shadow",
+      "--container-max": "spacing",
+      "--gutter": "spacing",
+      "--gutter-mobile": "spacing",
+      "--duration-fade": "other",
+      "--lift-hover": "spacing",
+      "--reveal-distance": "spacing"
+    },
+    "fontFamilies": [
+      "Anton",
+      "Archivo",
+      "Archivo Black",
+      "Bricolage Grotesque",
+      "Cormorant Garamond",
+      "DM Sans",
+      "Fraunces",
+      "IBM Plex Sans",
+      "Inter Tight",
+      "JetBrains Mono",
+      "Manrope",
+      "Shrikhand",
+      "Sora",
+      "Space Grotesk",
+      "Space Mono"
+    ]
+  }
+}

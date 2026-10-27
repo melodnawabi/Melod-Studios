@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/typography.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/colors.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/palettes.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/components/components.css">
+<link rel="stylesheet" href="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Caprasimo&family=Figtree:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+<script src="_ds/melod-studio-design-system-9dfadf07-8c71-4841-832c-0ab093cf9a33/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--magenta-text)}a:hover{color:var(--ink)}
+@keyframes msMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes msFly{0%{left:6%;top:80%}35%{left:32%;top:38%}65%{left:62%;top:62%}100%{left:90%;top:14%}}
+@keyframes msFill{0%{width:8%}70%,100%{width:100%}}
+@keyframes msSwatch{0%,100%{background:#00dcc8}25%{background:#d4006f}50%{background:#6200ea}75%{background:#f7f4ee}}
+@keyframes msSpin{0%{transform:rotate(-30deg)}50%{transform:rotate(40deg)}100%{transform:rotate(-30deg)}}
+@keyframes msType{0%{width:0}60%,100%{width:100%}}
+@keyframes msBlink{50%{opacity:0}}
+@keyframes msFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div id="top" ref="{{ rootRef }}" style="background:var(--ground);color:var(--ink);overflow-x:clip">
+<nav style="max-width:var(--container-max);margin:0 auto;padding:var(--space-6) var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;box-sizing:border-box">
+  <a href="Melod%20Studio%20Site%20v2.dc.html" style="font:900 24px/1 var(--font-display);color:var(--ink);text-decoration:none;letter-spacing:-.02em;white-space:nowrap">Melod Studios</a>
+  <div style="display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <a href="Melod%20Studios%20Work.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Work</a>
+    <a href="Melod%20Studios%20Templates.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Templates</a>
+    <a href="Melod%20Studios%20Pricing.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Pricing</a>
+    <a href="Melod%20Studio%20Timeline.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Our story</a>
+    <a href="Melod%20Studio%20Tools.dc.html" style="font:600 15px/20px var(--font-sans);color:var(--ink);text-decoration:none">Resources</a>
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="outline" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="130px,52px">Get in touch</x-import>
+  </div>
+</nav>
+
+<section id="work" style="max-width:var(--container-max);margin:0 auto;padding:var(--space-24) var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-24)">
+  <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:720px">
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Eyebrow" hint-size="200px,16px">Selected work</x-import>
+    <h1 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0;text-wrap:balance">Two mortgage sites I built. Two very different looks.</h1>
+  </div>
+
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:var(--space-12);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:var(--space-4);align-items:flex-start;max-width:460px">
+      <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--magenta-text)">01 • MORTGAGE AGENT • WATERLOO REGION</span>
+      <h3 style="font:900 clamp(36px,4vw,56px)/.96 var(--font-display);letter-spacing:-.02em;margin:0">melodnawabi.ca</h3>
+      <p style="font:500 18px/28px var(--font-sans);color:var(--ink-muted);margin:0">A full mortgage practice online. 14 free calculators, a 3D home that builds itself from your numbers, a daily market update, 19 plain-language articles, a renewal reminder and lead forms that land straight in the inbox. In English, Farsi and Dari.</p>
+      <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.TrustRow" facts="{{ melodFacts }}" hint-size="100%,24px"></x-import>
+      <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="text" href="https://melodnawabi.ca" target="_blank" rel="noopener" hint-size="160px,52px">Visit the live site</x-import>
+    </div>
+    <div style="perspective:1400px">
+      <div data-tilt="" style="position:relative;transform-style:preserve-3d;transition:transform .4s ease-out;padding:0 10% 8% 0">
+        <div style="container-type:inline-size;border-radius:var(--radius-lg);overflow:hidden;background:#f5ead8;box-shadow:0 40px 70px -24px rgba(6,43,46,.6)">
+          <div style="display:flex;align-items:center;gap:1.2cqw;padding:1.8cqw 2.2cqw;background:#111111"><span style="width:1.6cqw;height:1.6cqw;border-radius:999px;background:var(--magenta)"></span><span style="width:1.6cqw;height:1.6cqw;border-radius:999px;background:var(--ground)"></span><span style="width:1.6cqw;height:1.6cqw;border-radius:999px;background:#f7f4ee"></span><span style="margin-left:2cqw;padding:.9cqw 2.4cqw;border-radius:999px;background:#2b2b2b;color:#f7f4ee;font:500 1.9cqw/1 var(--font-mono)">melodnawabi.ca/affordability-calculator</span></div>
+          <div style="padding:5cqw 4cqw;display:grid;grid-template-columns:1fr 1.1fr;gap:4cqw;align-items:center">
+            <div style="display:flex;flex-direction:column;gap:2cqw"><span style="font:700 1.6cqw/1 'Figtree',sans-serif;letter-spacing:.14em;color:#5d6b45">TOOLS</span><span style="font:400 5.4cqw/1.02 'Caprasimo',serif;color:#201e1d">Estimate your monthly payment.</span><span style="font:500 1.9cqw/1.4 'Figtree',sans-serif;color:#4a3f35">Free, and nothing you enter is sent anywhere.</span></div>
+            <div style="padding:3cqw;border-radius:3cqw;background:#efe0c7;display:flex;flex-direction:column;gap:2cqw">
+              <div style="display:flex;flex-direction:column;gap:.8cqw"><span style="font:600 1.5cqw/1 'Figtree',sans-serif;color:#4a3f35">Home price</span><span style="padding:1.4cqw 1.8cqw;border-radius:999px;background:#ffffff;font:600 1.9cqw/1 var(--font-mono);color:#201e1d">$725,000</span></div><div style="display:flex;flex-direction:column;gap:.8cqw"><span style="font:600 1.5cqw/1 'Figtree',sans-serif;color:#4a3f35">Down payment</span><span style="padding:1.4cqw 1.8cqw;border-radius:999px;background:#ffffff;font:600 1.9cqw/1 var(--font-mono);color:#201e1d">$72,500</span></div><div style="display:flex;flex-direction:column;gap:.8cqw"><span style="font:600 1.5cqw/1 'Figtree',sans-serif;color:#4a3f35">Amortization (years)</span><span style="padding:1.4cqw 1.8cqw;border-radius:999px;background:#ffffff;font:600 1.9cqw/1 var(--font-mono);color:#201e1d">25</span></div>
+              <div style="padding:2cqw;border-radius:2cqw;background:#c67139;color:#ffffff;display:flex;justify-content:space-between;align-items:center"><span style="font:600 1.6cqw/1.2 'Figtree',sans-serif">Est. monthly</span><span style="font:400 3.6cqw/1 'Caprasimo',serif">$3,8xx</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;right:0;bottom:0;width:30%;transform:translateZ(90px)">
+          <div style="container-type:inline-size;padding:3.5cqw;border-radius:16cqw;background:#111111;box-shadow:0 40px 60px -20px rgba(6,43,46,.7)">
+            <div style="aspect-ratio:9/19.5;border-radius:13cqw;overflow:hidden;background:#f5ead8;display:flex;flex-direction:column;gap:4.4cqw;padding:20cqw 7cqw 7cqw;box-sizing:border-box;position:relative">
+              <span style="position:absolute;left:50%;top:4cqw;transform:translateX(-50%);width:30cqw;height:8cqw;border-radius:999px;background:#111111"></span>
+              <span style="font:700 4.4cqw/1.2 'Figtree',sans-serif;letter-spacing:.12em;color:#5d6b45">RENEWING IN 2026?</span>
+              <span style="font:400 9.6cqw/1.02 'Caprasimo',serif;color:#201e1d">Don't sign the bank's first offer.</span>
+              <span style="font:500 5cqw/1.4 'Figtree',sans-serif;color:#4a3f35">Switch lenders at renewal with no penalty.</span>
+              <span style="margin-top:auto;padding:5cqw 0;text-align:center;border-radius:999px;background:#c67139;color:#ffffff;font:700 5.2cqw/1 'Figtree',sans-serif">See renewal options</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:var(--space-12);align-items:center">
+    <div style="perspective:1400px">
+      <div data-tilt="" style="position:relative;transform-style:preserve-3d;transition:transform .4s ease-out;padding:0 0 8% 10%">
+        <div style="container-type:inline-size;border-radius:var(--radius-lg);overflow:hidden;background:#ffffff;box-shadow:0 40px 70px -24px rgba(6,43,46,.6)">
+          <div style="display:flex;align-items:center;gap:1.2cqw;padding:1.8cqw 2.2cqw;background:#111111"><span style="width:1.6cqw;height:1.6cqw;border-radius:999px;background:var(--magenta)"></span><span style="width:1.6cqw;height:1.6cqw;border-radius:999px;background:var(--ground)"></span><span style="width:1.6cqw;height:1.6cqw;border-radius:999px;background:#f7f4ee"></span><span style="margin-left:2cqw;padding:.9cqw 2.4cqw;border-radius:999px;background:#2b2b2b;color:#f7f4ee;font:500 1.9cqw/1 var(--font-mono)">garynagramortgages.ca</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:2.4cqw 4cqw;background:#14253d">
+            <span style="font:700 2.8cqw/1 'Source Serif 4',serif;color:#ffffff">Gary Nagra Mortgages</span>
+            <span style="display:flex;gap:2.6cqw;align-items:center;font:600 1.6cqw/1 'Figtree',sans-serif;color:#ffffff"><span>Services</span><span>Tools</span><span>Reviews</span><span style="padding:1.1cqw 2.2cqw;border-radius:1cqw;background:#c9a24a;color:#14253d">Book a free call</span></span>
+          </div>
+          <div style="padding:5cqw 4cqw;background:#14253d;display:grid;grid-template-columns:1.2fr 1fr;gap:4cqw;align-items:center">
+            <div style="display:flex;flex-direction:column;gap:2cqw"><span style="font:600 1.5cqw/1 'Figtree',sans-serif;letter-spacing:.14em;color:#e2c47c">MORTGAGE BROKER • VICTORIA BC</span><span style="font:700 5.6cqw/1.04 'Source Serif 4',serif;color:#ffffff">Don't just roll over with your bank.</span><span style="font:500 1.9cqw/1.4 'Figtree',sans-serif;color:#d7dde6">Options compared across Canada's banks, credit unions and trust companies.</span></div>
+            <div style="aspect-ratio:4/5;border-radius:2cqw;background:repeating-linear-gradient(45deg,#1f3452 0 6px,#26405f 6px 12px);display:flex;align-items:flex-end;padding:1.6cqw;box-sizing:border-box;font:600 1.4cqw/1 var(--font-mono);color:#d7dde6">PHOTO • GARY</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.6cqw;padding:3cqw 4cqw 4cqw">
+            <span style="padding:2cqw;border-radius:1.4cqw;background:#f2f4f7;display:flex;flex-direction:column;gap:.8cqw"><b style="font:700 2.6cqw/1 'Source Serif 4',serif;color:#14253d">4,200+</b><span style="font:500 1.3cqw/1.3 'Figtree',sans-serif;color:#3d4b5e">DLC brokers</span></span>
+            <span style="padding:2cqw;border-radius:1.4cqw;background:#f2f4f7;display:flex;flex-direction:column;gap:.8cqw"><b style="font:700 2.6cqw/1 'Source Serif 4',serif;color:#14253d">90+</b><span style="font:500 1.3cqw/1.3 'Figtree',sans-serif;color:#3d4b5e">lenders</span></span>
+            <span style="padding:2cqw;border-radius:1.4cqw;background:#f2f4f7;display:flex;flex-direction:column;gap:.8cqw"><b style="font:700 2.6cqw/1 'Source Serif 4',serif;color:#14253d">$0*</b><span style="font:500 1.3cqw/1.3 'Figtree',sans-serif;color:#3d4b5e">cost in most cases</span></span>
+            <span style="padding:2cqw;border-radius:1.4cqw;background:#f2f4f7;display:flex;flex-direction:column;gap:.8cqw"><b style="font:700 2.6cqw/1 'Source Serif 4',serif;color:#14253d">24h</b><span style="font:500 1.3cqw/1.3 'Figtree',sans-serif;color:#3d4b5e">reply</span></span>
+          </div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:29%;transform:translateZ(90px)">
+          <div style="container-type:inline-size;padding:3cqw;border-radius:12cqw;background:#24292e;box-shadow:0 40px 60px -20px rgba(6,43,46,.7)">
+            <div style="aspect-ratio:9/20;border-radius:9cqw;overflow:hidden;background:#ffffff;display:flex;flex-direction:column;box-sizing:border-box;position:relative">
+              <span style="position:absolute;left:50%;top:4cqw;transform:translateX(-50%);width:6cqw;height:6cqw;border-radius:999px;background:#111111"></span>
+              <div style="padding:16cqw 7cqw 7cqw;background:#14253d;display:flex;flex-direction:column;gap:4cqw"><span style="font:700 6cqw/1 'Source Serif 4',serif;color:#ffffff">Gary Nagra</span><span style="font:700 9cqw/1.05 'Source Serif 4',serif;color:#ffffff">Pick your speed.</span></div>
+              <div style="padding:6cqw 7cqw;display:flex;flex-direction:column;gap:3.4cqw">
+                <span style="padding:4.4cqw 5cqw;border-radius:3cqw;background:#f2f4f7;display:flex;justify-content:space-between;font:700 5cqw/1 'Figtree',sans-serif;color:#14253d">Call or text<span style="color:#7a5c14">15 sec</span></span>
+                <span style="padding:4.4cqw 5cqw;border-radius:3cqw;background:#f2f4f7;display:flex;justify-content:space-between;font:700 5cqw/1 'Figtree',sans-serif;color:#14253d">WhatsApp<span style="color:#7a5c14">30 sec</span></span>
+                <span style="padding:4.4cqw 5cqw;border-radius:3cqw;background:#f2f4f7;display:flex;justify-content:space-between;font:700 5cqw/1 'Figtree',sans-serif;color:#14253d">Apply online<span style="color:#7a5c14">5 min</span></span>
+              </div>
+              <span style="margin-top:auto;margin:auto 7cqw 7cqw;padding:5cqw 0;text-align:center;border-radius:3cqw;background:#c9a24a;color:#14253d;font:700 5.2cqw/1 'Figtree',sans-serif">Book a call</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-4);align-items:flex-start;max-width:460px">
+      <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--magenta-text)">02 • MORTGAGE BROKER • VICTORIA BC</span>
+      <h3 style="font:900 clamp(36px,4vw,56px)/.96 var(--font-display);letter-spacing:-.02em;margin:0">Gary Nagra Mortgages</h3>
+      <p style="font:500 18px/28px var(--font-sans);color:var(--ink-muted);margin:0">A broker site for Gary with Dominion Lending Centres in Victoria, BC. Service and area pages, a tools library of calculators, live Google reviews and a "pick your speed" contact block that makes booking a free call one tap away.</p>
+      <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.TrustRow" facts="{{ garyFacts }}" hint-size="100%,24px"></x-import>
+      <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="text" href="https://garynagramortgages.ca/" target="_blank" rel="noopener" hint-size="160px,52px">Visit the live site</x-import>
+    </div>
+  </div>
+</section>
+
+<section id="lab" style="background:#111111;color:#f7f4ee;padding:var(--space-24) 0;overflow:hidden">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-12)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--space-6)">
+      <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:680px">
+        <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">FROM THE DESIGN LAB</span>
+        <h2 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0;text-wrap:balance">More things I've designed.</h2>
+      </div>
+      <p style="font:500 17px/27px var(--font-sans);color:#d9d6cf;margin:0;max-width:36ch">Concepts, apps and style studies, finished and in progress. Hover one to pick it up.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:var(--space-8)">
+      
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 5s ease-in-out 0s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#ffffff;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:700 6cqw/1 'Fredoka',sans-serif;color:#1c2430">MnM Adventures</span>
+  <span style="font:700 3.4cqw/1 'Figtree',sans-serif;letter-spacing:.14em;color:#1e5fa8">2 PASSPORTS • 1 ADVENTURE</span>
+  <div style="position:relative;flex:1;border-radius:5cqw;background:#eef3f9;overflow:hidden">
+    <svg viewBox="0 0 100 80" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><path d="M8 66 C 30 10, 60 70, 92 14" fill="none" stroke="#1e5fa8" stroke-width=".8" stroke-dasharray="2 2"></path></svg>
+    <span style="position:absolute;left:0;top:0;width:5cqw;height:5cqw;border-radius:999px;background:#ffc93c;box-shadow:0 0 0 1.4cqw rgba(255,201,60,.35);margin:-2.5cqw;animation:msFly 4s ease-in-out infinite alternate"></span>
+    <span style="position:absolute;left:5%;bottom:8%;font:600 3cqw/1 var(--font-mono);color:#1c2430">TORONTO</span><span style="position:absolute;right:5%;top:8%;font:600 3cqw/1 var(--font-mono);color:#1c2430">AMALFI</span>
+  </div>
+  <span style="align-self:flex-start;padding:3.6cqw 6cqw;border-radius:999px;background:#ffc93c;color:#1c2430;font:700 4cqw/1 'Figtree',sans-serif">Watch our adventures</span>
+</div></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">TRAVEL • CREATOR SITE</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">MnM Adventures</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Nine pages of guides, videos, a destination map and a brand media kit.</span>
+      </div>
+    </div>
+      
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 5.6s ease-in-out -1s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#f7f4ee;padding:8cqw;display:flex;flex-direction:column;gap:4.4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#9e0058">HOME CLEANING • QUOTE</span>
+  <span style="font:900 9cqw/.96 var(--font-display);letter-spacing:-.02em;color:#111111">Your price in 30 seconds.</span>
+  <span style="height:2.4cqw;border-radius:2cqw;background:#e8e2d6;overflow:hidden"><span style="display:block;height:100%;background:#d4006f;animation:msFill 3.2s ease-in-out infinite"></span></span>
+  <span style="padding:4.4cqw;border-radius:3cqw;background:#ffffff;box-shadow:0 0 0 1cqw #6200ea;display:flex;justify-content:space-between;font:700 4.4cqw/1 var(--font-sans);color:#111111">Biweekly<span style="color:#004d2a">-15%</span></span>
+  <span style="padding:4.4cqw;border-radius:3cqw;background:#ffffff;display:flex;justify-content:space-between;font:700 4.4cqw/1 var(--font-sans);color:#111111">Monthly<span style="color:#004d2a">-10%</span></span>
+  <span style="margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;font:600 4cqw/1 var(--font-sans);color:#123f43">Your price<b style="font:600 10cqw/1 var(--font-mono);color:#111111">$148</b></span>
+</div></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">INSTANT QUOTE</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Fresh Nest Cleaning</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Three questions, one flat price, booked without a phone call.</span>
+      </div>
+    </div>
+      
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.2s ease-in-out -2s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#111111;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#00dcc8">REMIX LAB • 10 TEMPLATES</span>
+  <span style="font:900 9cqw/.96 var(--font-display);letter-spacing:-.02em;color:#f7f4ee">One site. Every look.</span>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3cqw;flex:1">
+    <span style="border-radius:3cqw;animation:msSwatch 6s steps(1) infinite"></span><span style="border-radius:3cqw;animation:msSwatch 6s steps(1) -1.5s infinite"></span><span style="border-radius:3cqw;animation:msSwatch 6s steps(1) -3s infinite"></span>
+    <span style="border-radius:3cqw;animation:msSwatch 6s steps(1) -4.5s infinite"></span><span style="border-radius:3cqw;display:flex;align-items:center;justify-content:center;background:#f7f4ee;font:900 9cqw/1 var(--font-display);color:#111111">Aa</span><span style="border-radius:3cqw;animation:msSwatch 6s steps(1) -.75s infinite"></span>
+  </div>
+  <span style="font:500 3.4cqw/1 var(--font-mono);color:#f7f4ee">11 PALETTES · 8 FONT PAIRS · 6 HEROES</span>
+</div></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">10 CLIENT TEMPLATES</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Remix Lab</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Swap palettes, fonts and heroes to fit any local business.</span>
+      </div>
+    </div>
+      
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.8s ease-in-out -3s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#062b2e;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#00dcc8">STYLE STUDY • AI COMPASS</span>
+  <span style="font:900 9cqw/.96 var(--font-display);letter-spacing:-.02em;color:#e8fffc">Find your way through AI.</span>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center">
+    <div style="position:relative;width:52cqw;height:52cqw;border-radius:999px;border:1cqw solid #1d6664;box-shadow:inset 0 0 0 4cqw #0b3d41">
+      <span style="position:absolute;left:50%;top:6%;transform:translateX(-50%);font:600 3.4cqw/1 var(--font-mono);color:#a6d9d4">N</span>
+      <span style="position:absolute;left:calc(50% - 1.2cqw);top:12%;width:2.4cqw;height:76%;animation:msSpin 5s ease-in-out infinite;transform-origin:50% 50%;display:flex;flex-direction:column"><span style="flex:1;background:#ff4fa3;border-radius:2cqw 2cqw 0 0"></span><span style="flex:1;background:#e8fffc;border-radius:0 0 2cqw 2cqw"></span></span>
+      <span style="position:absolute;left:50%;top:50%;width:6cqw;height:6cqw;margin:-3cqw;border-radius:999px;background:#e8fffc"></span>
+    </div>
+  </div>
+</div></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">STYLE STUDY</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">AI Compass</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A guide to AI tools, explored in three design styles.</span>
+      </div>
+    </div>
+      
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7.4s ease-in-out -1.5s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#f7f4ee;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#9e0058">STYLE STUDY • INKWELL</span>
+  <span style="font:700 10cqw/1 var(--font-luxe-display);color:#111111">Write it down. Beautifully.</span>
+  <div style="flex:1;display:flex;flex-direction:column;gap:3cqw;padding:5cqw;border-radius:3cqw;background:#ffffff">
+    <span style="height:2.2cqw;border-radius:2cqw;background:#e8e2d6;width:90%"></span>
+    <span style="height:2.2cqw;border-radius:2cqw;background:#e8e2d6;width:75%"></span>
+    <span style="display:flex;align-items:center;gap:1cqw"><span style="height:2.2cqw;border-radius:2cqw;background:#111111;width:60%;animation:msType 3.5s steps(14) infinite"></span><span style="width:.8cqw;height:5cqw;background:#d4006f;animation:msBlink 1s steps(1) infinite"></span></span>
+  </div>
+  <span style="align-self:flex-start;padding:3.6cqw 6cqw;border-radius:2cqw;border:.6cqw solid #111111;color:#111111;font:700 4cqw/1 var(--font-sans)">Start writing</span>
+</div></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">STYLE STUDY</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Inkwell</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A calm writing app, explored in three design styles.</span>
+      </div>
+    </div>
+    
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.2s ease-in-out -1.2s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#f7f4ee;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#9e0058;margin-top:8cqw">TEMPLATE BUILDER</span>
+  <span style="font:900 9cqw/.96 var(--font-display);letter-spacing:-.02em;color:#111111">57 sites. One builder.</span>
+  <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:2.4cqw"><span style="border-radius:2.4cqw;background:#00dcc8;animation:msFloat 3s ease-in-out -0s infinite"></span><span style="border-radius:2.4cqw;background:#d4006f;animation:msFloat 3.4s ease-in-out -0.3s infinite"></span><span style="border-radius:2.4cqw;background:#6200ea;animation:msFloat 3.8s ease-in-out -0.6s infinite"></span><span style="border-radius:2.4cqw;background:#111111;animation:msFloat 4.2s ease-in-out -0.8999999999999999s infinite"></span><span style="border-radius:2.4cqw;background:#f5ead8;animation:msFloat 4.6s ease-in-out -1.2s infinite"></span><span style="border-radius:2.4cqw;background:#14253d;animation:msFloat 5s ease-in-out -1.5s infinite"></span></div>
+  <span style="font:500 3.2cqw/1 var(--font-mono);color:#111111">FONTS · SPACING · COLOURS · MOTION</span>
+</div></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">DESIGN SYSTEM • BUILDER</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Studio 50+</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">50 website templates plus 7 originals in one builder. Switch fonts, colours, layouts, cursors and motion.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7s ease-in-out -2s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#ffffff;padding:8cqw;display:flex;flex-direction:column;gap:3.4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#1e5fa8;margin-top:8cqw">EXPENSE SHEET • ONTARIO</span>
+  <span style="font:900 9cqw/.96 var(--font-display);letter-spacing:-.02em;color:#111111">Snap it. Sort it. Claim it.</span>
+  <span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#eef3f9;font:700 3.6cqw/1 var(--font-sans);color:#111111">Home office<b style="font:600 3.6cqw/1 var(--font-mono)">$1,240</b></span><span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#eef3f9;font:700 3.6cqw/1 var(--font-sans);color:#111111">Phone + internet<b style="font:600 3.6cqw/1 var(--font-mono)">$612</b></span><span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#eef3f9;font:700 3.6cqw/1 var(--font-sans);color:#111111">Vehicle<b style="font:600 3.6cqw/1 var(--font-mono)">$2,085</b></span>
+  <span style="margin-top:auto;font:500 3cqw/1.3 var(--font-mono);color:#123f43">SAVED ON YOUR PHONE ONLY</span>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">PHONE APP • TAXES</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">OTIS</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A phone-first tax write-off organizer for Ontario households. Works offline, keeps every receipt on your device.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7.6s ease-in-out -2.6s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#0e1726;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#7fb2ff;margin-top:8cqw">REAL ESTATE APP</span>
+  <span style="font:900 9cqw/.96 var(--font-display);letter-spacing:-.02em;color:#e8eef9">Find the home. Then design it.</span>
+  <div style="flex:1;position:relative"><span style="position:absolute;left:20%;top:20%;width:9cqw;height:9cqw;margin:-4.5cqw;border-radius:999px;background:#18243a;box-shadow:0 0 0 .8cqw #3d8bff;animation:msFloat 3s ease-in-out -0s infinite"></span><span style="position:absolute;left:70%;top:15%;width:9cqw;height:9cqw;margin:-4.5cqw;border-radius:999px;background:#18243a;box-shadow:0 0 0 .8cqw #3d8bff;animation:msFloat 3.5s ease-in-out -0.4s infinite"></span><span style="position:absolute;left:45%;top:55%;width:9cqw;height:9cqw;margin:-4.5cqw;border-radius:999px;background:#3d8bff;box-shadow:0 0 0 .8cqw #3d8bff;animation:msFloat 4s ease-in-out -0.8s infinite"></span><span style="position:absolute;left:15%;top:75%;width:9cqw;height:9cqw;margin:-4.5cqw;border-radius:999px;background:#18243a;box-shadow:0 0 0 .8cqw #3d8bff;animation:msFloat 4.5s ease-in-out -1.2000000000000002s infinite"></span><span style="position:absolute;left:75%;top:70%;width:9cqw;height:9cqw;margin:-4.5cqw;border-radius:999px;background:#18243a;box-shadow:0 0 0 .8cqw #3d8bff;animation:msFloat 5s ease-in-out -1.6s infinite"></span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">REAL ESTATE • APP</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Aniva</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A home buying app: neighbourhood guides, live listings and a home designer, with accounts and saved searches.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 8.2s ease-in-out -3.2s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#111111;padding:8cqw;display:flex;flex-direction:column;justify-content:center;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#00dcc8">O.N.C.E.</span>
+  <span style="font:900 12cqw/.92 var(--font-display);letter-spacing:-.02em;color:#f7f4ee">Own nothing. Control everything.</span>
+  <span style="height:2.4cqw;border-radius:2cqw;background:#2b2b2b;width:90%"></span><span style="height:2.4cqw;border-radius:2cqw;background:#2b2b2b;width:70%"></span><span style="height:2.4cqw;border-radius:2cqw;background:#2b2b2b;width:50%"></span>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">CONCEPT</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">O.N.C.E.</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Own Nothing, Control Everything. An agents panel and roadmaps for running everything from one place.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.8s ease-in-out -1.8s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#c6e86a;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#1d3b2a;margin-top:8cqw">FITNESS</span>
+  <span style="font:900 10cqw/.94 var(--font-display);letter-spacing:-.02em;color:#1d3b2a">Stronger every week.</span>
+  <div style="flex:1;display:flex;align-items:flex-end;gap:2.4cqw"><span style="flex:1;height:30%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.4"></span><span style="flex:1;height:45%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.48000000000000004"></span><span style="flex:1;height:40%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.56"></span><span style="flex:1;height:60%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.64"></span><span style="flex:1;height:55%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.72"></span><span style="flex:1;height:75%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.8"></span><span style="flex:1;height:90%;border-radius:1.6cqw 1.6cqw 0 0;background:#1d3b2a;opacity:0.88"></span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">GYM • WEB + APP</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Uptown Strength</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A gym website and member app: classes, coaching and progress tracking.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7.4s ease-in-out -2.4s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#062b2e;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#00dcc8;margin-top:8cqw">MARKETS</span>
+  <span style="font:900 10cqw/.94 var(--font-display);letter-spacing:-.02em;color:#e8fffc">Watch the market move.</span>
+  <svg viewBox="0 0 100 50" preserveAspectRatio="none" style="flex:1;width:100%"><polyline points="0,40 12,34 22,38 34,24 46,28 58,16 70,20 82,8 100,12" fill="none" stroke="#00dcc8" stroke-width="1.6"></polyline></svg>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">FINANCE • DATA</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">StockMarket</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A trading dashboard: markets, holdings, crypto, dividends and options, with an AI agent and lessons built in.</span>
+      </div>
+    </div>
+    
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.4s ease-in-out -1.4s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#161826;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#9184d9;margin-top:8cqw">PERSONAL AI</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#e9e9ed">Your own AI, on every device.</span>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center"><span style="width:30cqw;height:30cqw;border-radius:999px;background:radial-gradient(circle,#9184d9,#161826 70%);animation:msFloat 3s ease-in-out infinite"></span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">AI • ASSISTANT</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Melo</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A personal AI assistant with voice, phone app, agents and a second brain. Runs 24/7 on your own computer.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7.2s ease-in-out -2.2s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#120d18;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#c6e86a;margin-top:8cqw">LOUNGE • LOYALTY APP</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#f4f2ee">Every 9th shisha is on us.</span>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2cqw"><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:#c6e86a"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:transparent"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:transparent"></span><span style="aspect-ratio:1;border-radius:999px;border:.5cqw solid #c6e86a;background:transparent"></span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">HOSPITALITY • 4 APPS</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Volume Lounge</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A lounge system: a guest app with stamp cards, plus staff, manager and table kiosk screens.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 8s ease-in-out -3s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#0d0b0a;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#e8b04b;margin-top:8cqw">WORLD CINEMA FINDER</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#efe7d8">Describe the scene. We find the film.</span>
+  <span style="padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#16130f;border:.3cqw solid rgba(240,230,210,.16);font:400 3.4cqw/1.4 var(--font-sans);color:#a89f90">the one where the train stops in the snow and…</span>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">SEARCH • FILM</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Thatmovie</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Find any film from a plot fragment, a line of dialogue or a screenshot, across every country's cinema.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.8s ease-in-out -1.8s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#f5ead8;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#8a4a20;margin-top:8cqw">WHAT'S FOR DINNER</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#201e1d">Cook what's already in your fridge.</span>
+  <span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#ffffff;font:700 3.6cqw/1 var(--font-sans);color:#201e1d">Eggs, spinach, feta<b style="font:600 3.6cqw/1 var(--font-mono)">3</b></span><span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#ffffff;font:700 3.6cqw/1 var(--font-sans);color:#201e1d">Rice, chicken, lime<b style="font:600 3.6cqw/1 var(--font-mono)">5</b></span>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">FOOD • APP</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Fridge Chef</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Tell it what's in your fridge and get recipes you can make tonight.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7.6s ease-in-out -2.6s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#161826;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#9184d9;margin-top:8cqw">SORT YOUR FEEDS</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#e9e9ed">Everything you saved, finally sorted.</span>
+  <span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#1f2233;font:700 3.6cqw/1 var(--font-sans);color:#e9e9ed">Recipes<b style="font:600 3.6cqw/1 var(--font-mono)">214</b></span><span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#1f2233;font:700 3.6cqw/1 var(--font-sans);color:#e9e9ed">Travel<b style="font:600 3.6cqw/1 var(--font-mono)">98</b></span><span style="display:flex;justify-content:space-between;padding:3cqw 3.4cqw;border-radius:2.4cqw;background:#1f2233;font:700 3.6cqw/1 var(--font-sans);color:#e9e9ed">Workouts<b style="font:600 3.6cqw/1 var(--font-mono)">61</b></span>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">APP • 19+</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Sift</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">Connects your accounts and sorts everything you've liked, posted, shared and saved.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 8.4s ease-in-out -3.4s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#f3f2f2;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#b68235;margin-top:8cqw">PRIVATE AVIATION</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#201e1d">Wheels up in four hours.</span>
+  <svg viewBox="0 0 100 40" style="flex:1;width:100%"><path d="M4 34 C 30 4, 70 4, 96 30" fill="none" stroke="#b68235" stroke-width="1" stroke-dasharray="3 2"></path></svg>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">CHARTER • CONCEPT SITE</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Altura Jets</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A luxury private jet charter site: on-demand flights, empty legs, membership and a 24/7 flight desk.</span>
+      </div>
+    </div>
+    
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 6.6s ease-in-out -1.6s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#2f1d45;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#e3bd52;margin-top:8cqw">WEDDING + EVENT DJ • KW</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#f6f0fb">Music that moves you.</span>
+  <div style="flex:1;display:flex;align-items:flex-end;gap:1.6cqw"><span style="flex:1;height:40%;border-radius:1cqw;background:#9f77cc;animation:msFloat 1.6s ease-in-out -0s infinite"></span><span style="flex:1;height:70%;border-radius:1cqw;background:#9f77cc;animation:msFloat 1.8s ease-in-out -0.2s infinite"></span><span style="flex:1;height:55%;border-radius:1cqw;background:#9f77cc;animation:msFloat 2s ease-in-out -0.4s infinite"></span><span style="flex:1;height:90%;border-radius:1cqw;background:#9f77cc;animation:msFloat 2.2s ease-in-out -0.6000000000000001s infinite"></span><span style="flex:1;height:60%;border-radius:1cqw;background:#9f77cc;animation:msFloat 2.4000000000000004s ease-in-out -0.8s infinite"></span><span style="flex:1;height:80%;border-radius:1cqw;background:#9f77cc;animation:msFloat 2.6s ease-in-out -1s infinite"></span><span style="flex:1;height:45%;border-radius:1cqw;background:#9f77cc;animation:msFloat 2.8000000000000003s ease-in-out -1.2000000000000002s infinite"></span><span style="flex:1;height:75%;border-radius:1cqw;background:#9f77cc;animation:msFloat 3s ease-in-out -1.4000000000000001s infinite"></span><span style="flex:1;height:50%;border-radius:1cqw;background:#9f77cc;animation:msFloat 3.2s ease-in-out -1.6s infinite"></span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">CLIENT SITE • DJ</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">DJ King Kadeem</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A site for a Kitchener-Waterloo wedding and event DJ: mixes, music, booking, plus a version built to hand over on Squarespace.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7.8s ease-in-out -2.8s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#f5ead8;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#8a4a20;margin-top:8cqw">MEMOIR • ANIMATED TIMELINE</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#201e1d">Running from the Blast.</span>
+  <div style="flex:1;position:relative"><span style="position:absolute;left:0;right:0;top:50%;height:.4cqw;background:#c67139"></span><span style="position:absolute;left:8%;top:50%;width:4cqw;height:4cqw;margin:-2cqw;border-radius:999px;background:#201e1d"></span><span style="position:absolute;left:30%;top:50%;width:4cqw;height:4cqw;margin:-2cqw;border-radius:999px;background:#201e1d"></span><span style="position:absolute;left:52%;top:50%;width:4cqw;height:4cqw;margin:-2cqw;border-radius:999px;background:#201e1d"></span><span style="position:absolute;left:74%;top:50%;width:4cqw;height:4cqw;margin:-2cqw;border-radius:999px;background:#201e1d"></span><span style="position:absolute;left:92%;top:50%;width:4cqw;height:4cqw;margin:-2cqw;border-radius:999px;background:#c67139"></span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">STORY • ANIMATION</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Running from the Blast</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">My story, from Kabul to Kitchener, told as chapters and an animated journey.</span>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:var(--space-4)">
+      <div style="perspective:1200px"><div data-tilt="" style="transition:transform .4s ease-out;transform-style:preserve-3d">
+        <div style="animation:msFloat 7s ease-in-out -2s infinite">
+          <div style="container-type:inline-size;position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 60px -24px rgba(0,0,0,.7)"><div style="position:absolute;inset:0;background:#111111;padding:8cqw;display:flex;flex-direction:column;gap:4cqw">
+  <span style="font:500 3.4cqw/1 var(--font-mono);letter-spacing:.14em;color:#00dcc8;margin-top:8cqw">DAILY COMMAND CENTER</span>
+  <span style="font:900 9.4cqw/.96 var(--font-display);letter-spacing:-.02em;color:#f7f4ee">The whole day on one screen.</span>
+  <div style="display:flex;flex-direction:column;gap:2.4cqw"><span style="display:flex;align-items:center;gap:2.4cqw;padding:3cqw;border-radius:2.4cqw;background:#232323;font:700 3.6cqw/1 var(--font-sans);color:#f7f4ee"><span style="width:2.4cqw;height:2.4cqw;border-radius:999px;background:#00dcc8"></span>Morning briefing</span><span style="display:flex;align-items:center;gap:2.4cqw;padding:3cqw;border-radius:2.4cqw;background:#232323;font:700 3.6cqw/1 var(--font-sans);color:#f7f4ee"><span style="width:2.4cqw;height:2.4cqw;border-radius:999px;background:#00dcc8"></span>Follow-ups</span><span style="display:flex;align-items:center;gap:2.4cqw;padding:3cqw;border-radius:2.4cqw;background:#232323;font:700 3.6cqw/1 var(--font-sans);color:#f7f4ee"><span style="width:2.4cqw;height:2.4cqw;border-radius:999px;background:#00dcc8"></span>Renewals due</span></div>
+</div><span style="position:absolute;left:6cqw;top:6cqw;padding:2cqw 3.4cqw;border-radius:999px;background:#d4006f;color:#ffffff;font:600 3.2cqw/1 var(--font-mono);letter-spacing:.12em;white-space:nowrap">COMING SOON</span></div>
+        </div>
+      </div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font:500 11px/16px var(--font-mono);letter-spacing:.16em;color:var(--ground)">DASHBOARD • DAILY OPS</span>
+        <span style="font:900 24px/1.05 var(--font-display);letter-spacing:-.01em;color:#f7f4ee">Daily Command Center</span>
+        <span style="font:400 15px/23px var(--font-sans);color:#d9d6cf">A daily dashboard for running the business: briefing, follow-ups and what's due today.</span>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--mood-magenta);color:#ffffff;padding:var(--space-24) 0">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;flex-direction:column;gap:var(--space-6);align-items:flex-start">
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:#ffffff">NOW BOOKING • FALL 2026</span>
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:var(--type-h2);line-height:.96;letter-spacing:-.02em;margin:0;max-width:16ch;text-wrap:balance">Your business could be next.</h2>
+    <x-import component-from-global-scope="MelodStudioDesignSystem_9dfadf.Button" variant="primary" href="Melod%20Studio%20Site%20v2.dc.html#contact" hint-size="190px,52px">Book a free call</x-import>
+  </div>
+</section>
+
+<footer style="background:#111111;color:#f7f4ee;padding:var(--space-12) 0">
+  <div style="max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <a href="Melod%20Studio%20Site%20v2.dc.html" style="font:900 24px/1 var(--font-display);letter-spacing:-.02em;color:#f7f4ee;text-decoration:none">Melod Studios</a>
+    <div style="display:flex;gap:var(--space-6);flex-wrap:wrap;font:600 15px/20px var(--font-sans)"><a href="Melod%20Studios%20Work.dc.html" style="color:#f7f4ee">Work</a><a href="Melod%20Studios%20Templates.dc.html" style="color:#f7f4ee">Templates</a><a href="Melod%20Studios%20Pricing.dc.html" style="color:#f7f4ee">Pricing</a><a href="Melod%20Studio%20Timeline.dc.html" style="color:#f7f4ee">Our story</a><a href="Melod%20Studio%20Tools.dc.html" style="color:#f7f4ee">Resources</a><a href="Melod%20Studio%20Site%20v2.dc.html#contact" style="color:#f7f4ee">Contact</a></div>
+    <span style="font:500 12px/16px var(--font-mono);letter-spacing:.18em;color:var(--ground)">WEB • IPHONE • ANDROID • SEO • WATERLOO REGION</span>
+  </div>
+</footer>
+<a href="#top" style="position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:var(--radius-md);background:#111111;color:#f7f4ee;text-decoration:none;font:600 11px/1 var(--font-mono);letter-spacing:.1em;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)"><span style="width:8px;height:8px;border-radius:999px;background:var(--magenta)"></span>BUILT BY MELOD STUDIOS</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;tilt&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;default&quot;:2,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  componentDidMount() {
+    const root = this.rootRef.current; if (!root) return;
+    root.querySelectorAll('[data-tilt]').forEach(el => {
+      el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(), k = this.props.tilt ?? 2, x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; el.style.transform = 'rotateY(' + x * 18 * k + 'deg) rotateX(' + -y * 14 * k + 'deg)'; });
+      el.addEventListener('pointerleave', () => { el.style.transform = 'rotateY(-8deg) rotateX(4deg)'; });
+      el.style.transform = 'rotateY(-8deg) rotateX(4deg)';
+    });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    const els = root.querySelectorAll('[data-reveal]');
+    els.forEach(el => { el.style.opacity = 0; el.style.transform = 'translateY(40px)'; el.style.transition = 'opacity .8s ease, transform .9s cubic-bezier(.2,.8,.2,1)'; });
+    this.io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.style.opacity = 1; en.target.style.transform = 'none'; this.io.unobserve(en.target); } }), { threshold: .15 });
+    els.forEach(el => this.io.observe(el));
+  }
+  componentWillUnmount() { this.io && this.io.disconnect(); }
+  renderVals() {
+    return { rootRef: this.rootRef, melodFacts: ['14 free calculators', 'Daily market update', '3 languages'], garyFacts: ['Local SEO for Greater Victoria', 'Calculators and tools', 'Every screen'] };
+  }
+}
+</script>
+</body>
+</html>
